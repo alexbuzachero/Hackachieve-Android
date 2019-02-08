@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".RegisterPage"
     android:orientation="vertical">
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        app:srcCompat="@drawable/logo" />
 
     <LinearLayout
         android:layout_width="300dp"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="140dp"
         android:orientation="vertical">
 
-
         <TextView
-            android:id="@+id/signLabel"
+            android:id="@+id/registerPageTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign in to continue"
+            android:text="Sign Up"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/emailField"
+            android:id="@+id/nameFieldRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/emailRegisterField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -41,7 +42,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/passwordField"
+            android:id="@+id/passwordFieldRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -50,25 +51,26 @@
             android:hint="Password"
             android:inputType="textPassword" />
 
+        <EditText
+            android:id="@+id/passwordConfFieldRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="Re-type Password"
+            android:inputType="textPassword" />
+
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/loginButton"
-        android:layout_width="@dimen/buttonLogin"
+        android:id="@+id/registerConfirmButton"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:text="Get Started!"
-        />
+        android:layout_marginTop="50dp"
+        android:text="Get Started!" />
 
-
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="@dimen/buttonLogin"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="130dp"
-        android:text="Don`t have any account? Sign Up!" />
 
 </LinearLayout>
