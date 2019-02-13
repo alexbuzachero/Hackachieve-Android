@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+//      Button to forward to registration page
         regButton = (Button) findViewById(R.id.registerButton);
         regButton.setOnClickListener(new View.OnClickListener() {
             @Override

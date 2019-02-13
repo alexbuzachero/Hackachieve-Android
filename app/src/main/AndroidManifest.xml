@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterPage"></activity>
+        <activity android:name=".ShortTermCard"></activity>
+        <activity android:name=".ShortTermPage" />
+        <activity android:name=".LongTermCard" />
+        <activity android:name=".LongTermPage" />
+        <activity android:name=".RegisterPage" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
