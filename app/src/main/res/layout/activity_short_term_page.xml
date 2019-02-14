@@ -1,9 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackGreen"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".ShortTermPage">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/shortTermTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Get in shape for Skiing"
+        android:textSize="24sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:cardElevation="2dp">
+
+                <!--<include layout="@layout/activity_short_term_card" />-->
+
+
+                <LinearLayout
+                    android:id="@+id/shortGoalClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorUnselected"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    tools:context=".ShortTermCard">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/shortTermTitleCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingBottom="30dp"
+                            android:text="Eat more vegetables"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/shortTermDescriptionCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingBottom="20dp"
+                            android:text="JSHdjhs sjdhj sjdhj hsd hjsd hjshdj hjsdhjshd jhsjdh jshd jhsjdh jshdjh jshdjhsjdhjshfhsjf hjhsfj jsh jsj hfjsh jfhsjfhjsh j" />
+
+                        <TextView
+                            android:id="@+id/shortTearmDeadlineCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="February 11" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:cardElevation="2dp">
+
+                <include layout="@layout/activity_short_term_card" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:cardElevation="2dp">
+
+                <include layout="@layout/activity_short_term_card" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:cardElevation="2dp">
+
+                <include layout="@layout/activity_short_term_card" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

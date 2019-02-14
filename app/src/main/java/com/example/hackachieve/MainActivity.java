@@ -8,6 +8,7 @@ import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button loginButton;
     private Button regButton;
 
     @Override
@@ -15,9 +16,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+//      Button to forward to LongTermGoals page
+        loginButton = (Button) findViewById(R.id.loginButton);
 //      Button to forward to registration page
         regButton = (Button) findViewById(R.id.registerButton);
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLongTermGoals();
+            }
+        });
+
         regButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void openRegisterPage(){
         Intent intent = new Intent(this, RegisterPage.class);
+        startActivity(intent);
+    }
+    public void openLongTermGoals(){
+        Intent intent = new Intent(this, LongTermPage.class);
         startActivity(intent);
     }
 }
