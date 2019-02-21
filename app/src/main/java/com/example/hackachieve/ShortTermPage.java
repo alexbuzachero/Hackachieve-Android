@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.content.Intent;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,10 +18,18 @@ public class ShortTermPage extends AppCompatActivity {
     private TextView dateSelected;
     private Boolean cardClicked = false;
 
+    private ImageView ongoingButton;
+    private ImageView addButton;
+    private ImageView completedButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_short_term_page);
+
+        ongoingButton = (ImageView) findViewById(R.id.ongoingIcon);
+        addButton = (ImageView) findViewById(R.id.addIcon);
+        completedButton = (ImageView) findViewById(R.id.completedIcon);
 
         //        Defining Cards
 
@@ -43,6 +52,21 @@ public class ShortTermPage extends AppCompatActivity {
                 }
             }
         });
+
+        ongoingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLongTermGoals();
+            }
+        });
+
+
+        completedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLongTermGoalsCompleted();
+            }
+        });
     }
 
     public void changeBackgroundSelected() {
@@ -57,5 +81,22 @@ public class ShortTermPage extends AppCompatActivity {
         titleSelected.setTextColor(Color.BLACK);
         contentSelected.setTextColor(Color.BLACK);
         dateSelected.setTextColor(Color.BLACK);
+    }
+
+    public void openLongTermGoals(){
+        Intent intent = new Intent(this, LongTermPage.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    public void openLongTermGoalsCompleted(){
+        Intent intent = new Intent(this, ShortTermPageCompleted.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

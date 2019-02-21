@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/colorUnselected"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".ShortTermCard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/shortTermTitleCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="30dp"
+            android:text="Eat more vegetables"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/shortTermDescriptionCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            android:text="JSHdjhs sjdhj sjdhj hsd hjsd hjshdj hjsdhjshd jhsjdh jshd jhsjdh jshdjh jshdjhsjdhjshfhsjf hjhsfj jsh jsj hfjsh jfhsjfhjsh j" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/shortTearmDeadlineCard"
+                android:layout_width="@dimen/SecondaryIcon"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="February 11" />
+
+            <TextView
+                android:id="@+id/completedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Completed" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

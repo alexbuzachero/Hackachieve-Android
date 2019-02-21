@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hackachieve">
 
+    <!--Giving permission to app access internet-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShortTermCard"></activity>
+        <activity android:name=".ShortTermCardCompleted"></activity>
+        <activity android:name=".LongTermCardCompleted" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/slide_in_left" />
+
+        <activity android:name=".ShortTermPageCompleted" />
+        <activity android:name=".LongTermPageCompleted" />
+        <activity android:name=".ShortTermCard" />
         <activity android:name=".ShortTermPage" />
         <activity android:name=".LongTermCard" />
         <activity android:name=".LongTermPage" />
