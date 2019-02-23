@@ -57,6 +57,6 @@ public class FetchData extends AsyncTask<Void,Void,Void> {
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
 
-        MainActivity.data.setText(this.data);
+        MenuPage.data.setText(this.data);
     }
 }

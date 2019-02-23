@@ -7,5 +7,24 @@
     <color name="colorUnselected">#EFEFEF</color>
     <color name="colorBackGreen">#C2F8E5</color>
 
+    <!--Main Pallete-->
+    <color name="mainPallete01">#F15864</color>
+    <color name="mainPallete02">#5DC8E2</color>
+    <color name="mainPallete03">#354AA4</color>
+
+    <!--Secondary Pallete-->
+    <color name="secondaryPallete01">#F89767</color>
+    <color name="secondaryPallete02">#17E09D</color>
+    <color name="secondaryPallete03">#796DB6</color>
+    <color name="secondaryPallete04">#36387C</color>
+
+    <!--Monocolor Palette-->
+    <color name="monocolorPallete01">#54575D</color>
+    <color name="monocolorPallete02">#BDBDD1</color>
+    <color name="monocolorPallete03">#E1E1EE</color>
+    <color name="monocolorPallete04">#F4F4FC</color>
+
+    <!--Button Box Color - Opacity: 40% -->
+    <color name="buttonBoxColor">#5B5B69</color>
 
 </resources>
