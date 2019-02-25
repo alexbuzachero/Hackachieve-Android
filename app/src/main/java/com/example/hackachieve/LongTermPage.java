@@ -11,6 +11,7 @@ public class LongTermPage extends AppCompatActivity{
 
 //        Creating longTermCardVariable(one variable for each card)
     private CardView longTermFitness;
+    private CardView longTermFinance;
     private ImageView ongoingButton;
     private ImageView addButton;
     private ImageView completedButton;
@@ -22,6 +23,7 @@ public class LongTermPage extends AppCompatActivity{
 
 //        Defining Cards
         longTermFitness = (CardView) findViewById(R.id.longTermFitnessID);
+        longTermFinance = (CardView) findViewById(R.id.financeID);
         ongoingButton = (ImageView) findViewById(R.id.ongoingIcon);
         addButton = (ImageView) findViewById(R.id.addIcon);
         completedButton = (ImageView) findViewById(R.id.completedIcon);
@@ -31,6 +33,12 @@ public class LongTermPage extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 openShortGoalsPage();
+            }
+        });
+        longTermFinance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openShortGoalsPageFinance();
             }
         });
         completedButton.setOnClickListener(new View.OnClickListener() {
@@ -43,10 +51,16 @@ public class LongTermPage extends AppCompatActivity{
     }
 
         public void openShortGoalsPage(){
-            Intent intent = new Intent(this, ShortTermPage.class);
+            Intent intent = new Intent(this, ShortTermPageHealth.class);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
+
+    public void openShortGoalsPageFinance(){
+        Intent intent = new Intent(this, ShortTermPageFinance.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
 
         public void openLongTermGoalsCompleted(){
             Intent intent = new Intent(this, LongTermPageCompleted.class);

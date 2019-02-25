@@ -9,7 +9,7 @@
     android:background="@color/colorUnselected"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".ShortTermCard">
+    tools:context=".ShortTermCardDesactive">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,6 +23,7 @@
             android:layout_weight="1"
             android:paddingBottom="30dp"
             android:text="Eat more vegetables"
+            android:textColor="@color/buttonBoxColor"
             android:textSize="18sp" />
 
         <TextView
@@ -31,30 +32,28 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingBottom="20dp"
-            android:text="JSHdjhs sjdhj sjdhj hsd hjsd hjshdj hjsdhjshd jhsjdh jshd jhsjdh jshdjh jshdjhsjdhjshfhsjf hjhsfj jsh jsj hfjsh jfhsjfhjsh j" />
-        <LinearLayout
+            android:text="JSHdjhs sjdhj sjdhj hsd hjsd hjshdj hjsdhjshd jhsjdh jshd jhsjdh jshdjh jshdjhsjdhjshfhsjf hjhsfj jsh jsj hfjsh jfhsjfhjsh j"
+            android:textColor="@color/buttonBoxColor" />
+
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginTop="2dp"
+                app:srcCompat="@drawable/ic_calelndar_icon" />
 
             <TextView
                 android:id="@+id/shortTearmDeadlineCard"
-                android:layout_width="150dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="February 11" />
-
-            <TextView
-                android:id="@+id/completedLabel"
-                android:layout_width="@dimen/SecondaryIcon"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/secondaryPallete02"
-                android:gravity="center"
-                android:text="Completed" />
-        </LinearLayout>
-
+                android:text="February 11"
+                android:textColor="@color/buttonBoxColor" />
+        </GridLayout>
     </LinearLayout>
-
 
 </LinearLayout>

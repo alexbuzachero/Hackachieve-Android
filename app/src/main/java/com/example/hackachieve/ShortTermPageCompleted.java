@@ -26,7 +26,7 @@ public class ShortTermPageCompleted extends AppCompatActivity {
         });
     }
     public void openShortTermGoals(){
-        Intent intent = new Intent(this, ShortTermPage.class);
+        Intent intent = new Intent(this, ShortTermPageHealth.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }

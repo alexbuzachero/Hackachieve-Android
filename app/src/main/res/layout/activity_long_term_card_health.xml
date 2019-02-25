@@ -2,16 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/longTermCardHealth"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="10dp"
     android:background="@color/monocolorPallete04"
     android:orientation="vertical"
-    tools:context=".ShortTermPage">
+    tools:context=".LongTermCardHealth">
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:background="@color/mainPallete02">
 
         <ImageView
@@ -51,64 +53,74 @@
         </LinearLayout>
     </GridLayout>
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/scrollSize"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="0dp">
-
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:cardBackgroundColor="@color/monocolorPallete04"
-                app:cardElevation="2dp">
-
-                <include layout="@layout/activity_short_term_card_completed" />
-
-            </android.support.v7.widget.CardView>
-
-
-        </LinearLayout>
-    </ScrollView>
-
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="52dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/ongoingIcon"
-            android:layout_width="18dp"
-            android:layout_height="@dimen/SecondaryIcon"
-            android:layout_gravity="center"
+            android:id="@+id/imageView4"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:contentDescription="ongoing"
-            app:srcCompat="@drawable/ongoing" />
+            app:srcCompat="@drawable/ic_list_icon" />
 
-        <ImageView
-            android:id="@+id/addIcon"
-            android:layout_width="19dp"
+        <TextView
+            android:id="@+id/goalsCompleted"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:contentDescription="add"
-            app:srcCompat="@drawable/addicon" />
+            android:width="50dp"
+            android:text="3/4" />
+
+        <TextView
+            android:id="@+id/goalsCompletedText"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:width="250dp"
+            android:text="COMPLETED" />
 
         <ImageView
-            android:id="@+id/completedIcon"
-            android:layout_width="11dp"
-            android:layout_height="@dimen/SecondaryIcon"
-            android:layout_gravity="center"
+            android:id="@+id/imageView5"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_gravity="top"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:contentDescription="completed"
-            app:srcCompat="@drawable/completed" />
+            app:srcCompat="@drawable/ic_calelndar_icon" />
+
+        <TextView
+            android:id="@+id/dateComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="FEBRUARY 28" />
+
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:progress="75" />
     </LinearLayout>
+
 
 </LinearLayout>

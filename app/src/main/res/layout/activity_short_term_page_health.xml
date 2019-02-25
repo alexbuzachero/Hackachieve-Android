@@ -6,75 +6,74 @@
     android:layout_height="match_parent"
     android:background="@color/monocolorPallete03"
     android:orientation="vertical"
-    tools:context=".LongTermPage">
+    tools:context=".ShortTermPageHealth">
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:background="@color/secondaryPallete04"
-        android:orientation="horizontal">
+        android:background="@color/mainPallete02">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageView6"
+            android:layout_width="43dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/health_icon" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/hackachieve_symbol" />
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="60dp"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
 
-        <TextView
-            android:id="@+id/longTermTitle"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/monocolorPallete02"
-            android:gravity="center_vertical"
-            android:paddingLeft="10dp"
-            android:text="Main Goals"
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/categoryLabel"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="HEALTH"
+                android:textColor="@color/monocolorPallete04"
+                android:textSize="18sp" />
 
+            <TextView
+                android:id="@+id/cardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Get in shape for skiing"
+                android:textColor="@color/monocolorPallete04"
+                android:textSize="20sp"
+                app:fontFamily="@font/alegreya_sans_medium_italic" />
 
+        </LinearLayout>
     </GridLayout>
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/scrollSize"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/monocolorPallete04">
+        android:background="@color/monocolorPallete03"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/monocolorPallete03"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="0dp">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/longTermFitnessID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:clickable="true"
                 app:cardBackgroundColor="@color/monocolorPallete03"
                 app:cardElevation="2dp">
 
-                <include layout="@layout/activity_long_term_card_health" />
-
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/financeID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:clickable="true"
-                app:cardBackgroundColor="@color/monocolorPallete03">
-
-                <include layout="@layout/activity_long_term_card_finance" />
+                <include layout="@layout/activity_short_term_card_active" />
 
             </android.support.v7.widget.CardView>
 
@@ -82,19 +81,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:cardBackgroundColor="@color/monocolorPallete03">
+                app:cardBackgroundColor="@color/monocolorPallete03"
+                app:cardElevation="2dp">
 
-                <include layout="@layout/activity_long_term_card_spiritual" />
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:cardBackgroundColor="@color/monocolorPallete03">
-
-                <include layout="@layout/activity_long_term_card_career" />
+                <include layout="@layout/activity_short_term_card_active" />
 
             </android.support.v7.widget.CardView>
 
@@ -102,9 +92,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:cardBackgroundColor="@color/monocolorPallete03">
+                app:cardBackgroundColor="@color/monocolorPallete03"
+                app:cardElevation="2dp">
 
-                <include layout="@layout/activity_long_term_card_personal_dev" />
+                <include layout="@layout/activity_short_term_card_desactive" />
 
             </android.support.v7.widget.CardView>
 
@@ -112,9 +103,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:cardBackgroundColor="@color/monocolorPallete03">
+                app:cardBackgroundColor="@color/monocolorPallete03"
+                app:cardElevation="2dp">
 
-                <include layout="@layout/activity_long_term_card_fun" />
+                <include layout="@layout/activity_short_term_card_desactive" />
 
             </android.support.v7.widget.CardView>
 
@@ -152,4 +144,5 @@
             android:contentDescription="completed"
             app:srcCompat="@drawable/completed" />
     </LinearLayout>
+
 </LinearLayout>
