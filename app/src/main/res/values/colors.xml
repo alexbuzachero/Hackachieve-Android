@@ -26,5 +26,6 @@
 
     <!--Button Box Color - Opacity: 40% -->
     <color name="buttonBoxColor">#5B5B69</color>
+    <color name="borderColor">#C4CDE0</color>
 
 </resources>

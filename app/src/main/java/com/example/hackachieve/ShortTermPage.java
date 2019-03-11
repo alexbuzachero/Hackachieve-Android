@@ -21,6 +21,7 @@ public class ShortTermPage extends AppCompatActivity {
     private ImageView ongoingButton;
     private ImageView addButton;
     private ImageView completedButton;
+    private ImageView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class ShortTermPage extends AppCompatActivity {
         ongoingButton = (ImageView) findViewById(R.id.ongoingIcon);
         addButton = (ImageView) findViewById(R.id.addIcon);
         completedButton = (ImageView) findViewById(R.id.completedIcon);
+        backButton = (ImageView) findViewById(R.id.backButton);
 
         //        Defining Cards
 
@@ -50,6 +52,13 @@ public class ShortTermPage extends AppCompatActivity {
                     changeBackgroundUnselected();
                     cardClicked = false;
                 }
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLongTermGoals();
             }
         });
 

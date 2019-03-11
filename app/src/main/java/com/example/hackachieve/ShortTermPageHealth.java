@@ -21,6 +21,7 @@ public class ShortTermPageHealth extends AppCompatActivity {
     private ImageView ongoingButton;
     private ImageView addButton;
     private ImageView completedButton;
+    private ImageView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class ShortTermPageHealth extends AppCompatActivity {
         ongoingButton = (ImageView) findViewById(R.id.ongoingIcon);
         addButton = (ImageView) findViewById(R.id.addIcon);
         completedButton = (ImageView) findViewById(R.id.completedIcon);
+        backButton = (ImageView) findViewById(R.id.backButton);
 
         //        Defining Cards
 
@@ -52,6 +54,13 @@ public class ShortTermPageHealth extends AppCompatActivity {
 //                }
 //            }
 //        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLongTermGoals();
+            }
+        });
 
         ongoingButton.setOnClickListener(new View.OnClickListener() {
             @Override

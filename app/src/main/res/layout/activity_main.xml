@@ -4,42 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/secondaryPallete04"
+    android:background="@drawable/background"
     android:orientation="vertical"
+    android:paddingTop="250dp"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView18"
+        android:id="@+id/imageView10"
         android:layout_width="match_parent"
-        android:layout_height="57dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="60dp"
-        app:srcCompat="@drawable/hackachieve_logo_dark" />
+        android:layout_height="59dp"
+        app:srcCompat="@drawable/hackachieve_symbol" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Hack Yourself!"
+        android:text="hackachieve"
         android:textColor="@color/monocolorPallete04"
-        android:textSize="30sp"
-        app:fontFamily="@font/amaranth_bold" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
-        android:gravity="center"
-        android:text="Double your productivity. Achieve your goals"
-        android:textColor="@color/monocolorPallete04" />
-
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ha_character_halfbody" />
-
+        android:textSize="30sp" />
 </LinearLayout>
