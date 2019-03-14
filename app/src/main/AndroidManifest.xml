@@ -15,11 +15,6 @@
         <activity android:name=".ShortTermPageHealth" />
         <activity android:name=".ShortTermCardDesactive" />
         <activity android:name=".ShortTermCardActive" />
-        <activity android:name=".LongTermCardFun" />
-        <activity android:name=".LongTermCardPersonalDev" />
-        <activity android:name=".LongTermCardCareer" />
-        <activity android:name=".LongTermCardSpiritual" />
-        <activity android:name=".LongTermCardFinance" />
         <activity android:name=".LongTermCardHealth" />
         <activity android:name=".MenuPage" />
         <activity android:name=".ShortTermCardCompleted" />

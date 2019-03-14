@@ -12,6 +12,7 @@
     tools:context=".LongTermCardHealth">
 
     <GridLayout
+        android:id="@+id/backgroundHeader"
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:background="@color/mainPallete02"></GridLayout>
@@ -30,7 +31,7 @@
             android:paddingTop="5dp">
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/iconCard"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/IconCard"
                 android:layout_weight="1"
