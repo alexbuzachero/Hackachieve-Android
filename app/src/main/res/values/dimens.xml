@@ -6,4 +6,5 @@
     <dimen name="scrollSize">495dp</dimen>
     <dimen name="Button">250dp</dimen>
     <dimen name="IconCard">17dp</dimen>
+    <dimen name="buttonNew">70dp</dimen>
 </resources>

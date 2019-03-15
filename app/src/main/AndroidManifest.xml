@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShortTermPageFinance"></activity>
+        <activity android:name=".ShortTermPageCareer"></activity>
+        <activity android:name=".ShortTermPageFun" />
+        <activity android:name=".ShortTermPagePersonalDev" />
+        <activity android:name=".ShortTermPageSpiritual" />
+        <activity android:name=".ShortTermPageFinance" />
         <activity android:name=".ShortTermPageHealth" />
         <activity android:name=".ShortTermCardDesactive" />
         <activity android:name=".ShortTermCardActive" />

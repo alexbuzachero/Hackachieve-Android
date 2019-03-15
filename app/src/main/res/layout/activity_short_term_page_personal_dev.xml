@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/monocolorPallete03"
     android:orientation="vertical"
-    tools:context=".ShortTermPageFinance">
+    tools:context=".ShortTermPagePersonalDev">
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:background="@color/secondaryPallete01"
+        android:background="@color/mainPallete01"
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
 
@@ -49,14 +49,14 @@
                         android:layout_height="18dp"
                         android:layout_marginTop="2dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/finances_icon" />
+                        app:srcCompat="@drawable/personal_dev_icon" />
 
                     <TextView
                         android:id="@+id/categoryLabel"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
-                        android:text="FINANCES"
+                        android:text="PERSONAL DEVELOPMENT"
                         android:textColor="@color/monocolorPallete04"
                         android:textSize="12sp"
                         app:fontFamily="@font/amaranth_bold" />

@@ -9,7 +9,7 @@
     android:layout_marginBottom="10dp"
     android:background="@drawable/card_shape"
     android:orientation="vertical"
-    tools:context=".LongTermCardHealth">
+    tools:context=".LongTermCard">
 
     <GridLayout
         android:id="@+id/backgroundHeader"

@@ -8,8 +8,11 @@
     android:layout_marginBottom="10dp"
     android:background="@color/colorUnselected"
     android:orientation="vertical"
-    android:padding="20dp"
-    tools:context=".ShortTermCard">
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    tools:context=".ShortTermCardCompleted">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,8 +24,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingBottom="30dp"
+            android:paddingBottom="15dp"
             android:text="Eat more vegetables"
+            android:textColor="@color/buttonBoxColor"
             android:textSize="18sp" />
 
         <TextView
@@ -30,31 +34,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingBottom="20dp"
-            android:text="JSHdjhs sjdhj sjdhj hsd hjsd hjshdj hjsdhjshd jhsjdh jshd jhsjdh jshdjh jshdjhsjdhjshfhsjf hjhsfj jsh jsj hfjsh jfhsjfhjsh j" />
-        <LinearLayout
+            android:paddingBottom="15dp"
+            android:text="JSHdjhs sjdhj sjdhj hsd hjsd hjshdj hjsdhjshd jhsjdh jshd jhsjdh jshdjh jshdjhsjdhjshfhsjf hjhsfj jsh jsj hfjsh jfhsjfhjsh j"
+            android:textColor="@color/buttonBoxColor" />
+
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginTop="2dp"
+                app:srcCompat="@drawable/ic_calelndar_icon" />
 
             <TextView
                 android:id="@+id/shortTearmDeadlineCard"
-                android:layout_width="150dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="February 11" />
-
-            <TextView
-                android:id="@+id/completedLabel"
-                android:layout_width="@dimen/SecondaryIcon"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/secondaryPallete02"
-                android:gravity="center"
-                android:text="Completed" />
-        </LinearLayout>
+                android:text="February 11"
+                android:textColor="@color/buttonBoxColor" />
+        </GridLayout>
 
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/borderColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/star_icon" />
+
+        <TextView
+            android:id="@+id/statusCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="COMPLETED"
+            android:textColor="@color/buttonBoxColor" />
+    </LinearLayout>
 
 </LinearLayout>

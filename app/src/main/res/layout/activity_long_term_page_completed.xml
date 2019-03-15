@@ -4,104 +4,208 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/monocolorPallete03"
     android:orientation="vertical"
-    android:paddingLeft="20dp"
-    android:paddingTop="10dp"
-    android:paddingRight="20dp"
-    tools:context=".LongTermPage">
+    tools:context=".LongTermPageCompleted">
 
-    <TextView
-        android:id="@+id/longTermTitle"
+
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginBottom="10dp"
-        android:text="Completed Long Term Goals"
-        android:textSize="24sp" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/scrollSize"
-        android:layout_marginBottom="10dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="0dp">
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/longTermFitnessID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:clickable="true"
-                app:cardElevation="2dp">
-
-                <include layout="@layout/activity_long_term_card_completed" />
-
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:clickable="true">
-
-                <include layout="@layout/activity_long_term_card_completed" />
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <include layout="@layout/activity_long_term_card_completed" />
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <include layout="@layout/activity_long_term_card_completed" />
-
-            </android.support.v7.widget.CardView>
-
-        </LinearLayout>
-    </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
+        android:background="@color/secondaryPallete04"
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/ongoingIcon"
-            android:layout_width="18dp"
-            android:layout_height="@dimen/SecondaryIcon"
-            android:layout_gravity="center"
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:contentDescription="ongoing"
-            app:srcCompat="@drawable/ongoing" />
+            app:srcCompat="@drawable/hackachieve_symbol" />
+
+        <TextView
+            android:id="@+id/longTermTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/monocolorPallete02"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Goals Completed"
+            android:textSize="24sp" />
+
+
+
+    </GridLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="552dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="549dp"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:layout_marginBottom="2dp"-->
+    <!--android:background="@color/monocolorPallete04">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/monocolorPallete03"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/longTermFitnessID"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:clickable="true"-->
+    <!--app:cardBackgroundColor="@color/monocolorPallete03"-->
+    <!--app:cardElevation="2dp">-->
+
+    <!--<include layout="@layout/activity_long_term_card_health" />-->
+
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/financeID"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:clickable="true"-->
+    <!--app:cardBackgroundColor="@color/monocolorPallete03">-->
+
+    <!--<include layout="@layout/activity_long_term_card_finance" />-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--app:cardBackgroundColor="@color/monocolorPallete03">-->
+
+    <!--<include layout="@layout/activity_long_term_card_spiritual" />-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--app:cardBackgroundColor="@color/monocolorPallete03">-->
+
+    <!--<include layout="@layout/activity_long_term_card_career" />-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--app:cardBackgroundColor="@color/monocolorPallete03">-->
+
+    <!--<include layout="@layout/activity_long_term_card_personal_dev" />-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--app:cardBackgroundColor="@color/monocolorPallete03">-->
+
+    <!--<include layout="@layout/activity_long_term_card_fun" />-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradientecolor1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ongoingIcon"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="ongoing"
+                android:paddingTop="8dp"
+                app:srcCompat="@drawable/current_goal" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="CURRENT GOALS"
+                android:textColor="@color/GrayTExt"
+                android:textSize="10sp"
+                app:fontFamily="@font/amaranth_bold" />
+
+        </LinearLayout>
+
 
         <ImageView
             android:id="@+id/addIcon"
-            android:layout_width="19dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0"
             android:contentDescription="add"
-            app:srcCompat="@drawable/addicon" />
+            app:srcCompat="@drawable/button_create_ok" />
 
-        <ImageView
-            android:id="@+id/completedIcon"
-            android:layout_width="11dp"
-            android:layout_height="@dimen/SecondaryIcon"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:contentDescription="completed"
-            app:srcCompat="@drawable/completed" />
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/completedIcon"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="ongoing"
+                android:paddingTop="8dp"
+                app:srcCompat="@drawable/completed_goal_active" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="COMPLETED GOALS"
+                android:textColor="@color/mainPallete01"
+                android:textSize="10sp"
+                app:fontFamily="@font/amaranth_bold" />
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

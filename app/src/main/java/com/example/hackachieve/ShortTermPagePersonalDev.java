@@ -1,17 +1,15 @@
 package com.example.hackachieve;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.view.View;
-import android.content.Intent;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class ShortTermPageFinance extends AppCompatActivity {
-
+public class ShortTermPagePersonalDev extends AppCompatActivity {
     private LinearLayout cardSelected;
     private TextView titleSelected;
     private TextView contentSelected;
@@ -26,7 +24,7 @@ public class ShortTermPageFinance extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_short_term_page_finance);
+        setContentView(R.layout.activity_short_term_page_personal_dev);
 
         ongoingButton = (ImageView) findViewById(R.id.ongoingIcon);
         addButton = (ImageView) findViewById(R.id.addIcon);

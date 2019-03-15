@@ -8,7 +8,10 @@
     android:layout_marginBottom="10dp"
     android:background="@color/colorUnselected"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
     tools:context=".ShortTermCardDesactive">
 
     <LinearLayout
@@ -21,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingBottom="30dp"
+            android:paddingBottom="15dp"
             android:text="Eat more vegetables"
             android:textColor="@color/buttonBoxColor"
             android:textSize="18sp" />
@@ -31,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingBottom="20dp"
+            android:paddingBottom="15dp"
             android:text="JSHdjhs sjdhj sjdhj hsd hjsd hjshdj hjsdhjshd jhsjdh jshd jhsjdh jshdjh jshdjhsjdhjshfhsjf hjhsfj jsh jsj hfjsh jfhsjfhjsh j"
             android:textColor="@color/buttonBoxColor" />
 
@@ -54,6 +57,34 @@
                 android:text="February 11"
                 android:textColor="@color/buttonBoxColor" />
         </GridLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/borderColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/star_icon" />
+
+        <TextView
+            android:id="@+id/statusCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="ON GOING"
+            android:textColor="@color/colorUnselected" />
     </LinearLayout>
 
 </LinearLayout>
