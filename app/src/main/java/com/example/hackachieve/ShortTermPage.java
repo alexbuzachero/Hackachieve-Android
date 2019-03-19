@@ -4,56 +4,116 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.content.Intent;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.support.annotation.Nullable;
+
+import java.util.ArrayList;
 
 public class ShortTermPage extends AppCompatActivity {
 
-    private LinearLayout cardSelected;
-    private TextView titleSelected;
-    private TextView contentSelected;
-    private TextView dateSelected;
-    private Boolean cardClicked = false;
+    FetchData data = new FetchData();
+
+    private TextView categoryLabel;
+    private TextView pageTitle;
+    private ImageView headerIcon;
+    private GridLayout headerBackground;
 
     private ImageView ongoingButton;
     private ImageView addButton;
     private ImageView completedButton;
     private ImageView backButton;
 
+    private Integer Category;
+    private String Title;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_short_term_page);
+
+        categoryLabel = (TextView) findViewById(R.id.categoryLabel);
+        pageTitle = (TextView) findViewById(R.id.cardTitle);
+        headerIcon = (ImageView) findViewById(R.id.headerIcon);
+        headerBackground = (GridLayout) findViewById(R.id.headerBackground);
 
         ongoingButton = (ImageView) findViewById(R.id.ongoingIcon);
         addButton = (ImageView) findViewById(R.id.addIcon);
         completedButton = (ImageView) findViewById(R.id.completedIcon);
         backButton = (ImageView) findViewById(R.id.backButton);
 
-        //        Defining Cards
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
 
-        cardSelected = (LinearLayout) findViewById(R.id.shortGoalClicked);
-        titleSelected = (TextView) findViewById(R.id.shortTermTitleCard);
-        contentSelected = (TextView) findViewById(R.id.shortTermDescriptionCard);
-        dateSelected = (TextView) findViewById(R.id.shortTearmDeadlineCard);
+        Category = extras.getInt("CATEGORY");
+        Title = extras.getString("PAGETITLE");
 
-        //        Add Click listener to the cards
-        cardSelected.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (cardClicked == false){
-                    changeBackgroundSelected();
-                    cardClicked = true;
+        Log.d("CategoryPage", String.valueOf(Category));
+        Log.d("CategoryPage", Title );
 
-                } else {
-                    changeBackgroundUnselected();
-                    cardClicked = false;
-                }
-            }
-        });
+
+        if (Category == 1){
+            Log.d("ENTER", "01" );
+            categoryLabel.setText("HEALTH");
+            pageTitle.setText(Title);
+            headerIcon.setImageResource(R.drawable.health_icon);
+            headerBackground.setBackgroundColor(Color.parseColor("#5DC8E2"));
+
+            data.initShortGoalsHealth();
+        }
+        if (Category == 2){
+            Log.d("ENTER", "02" );
+            categoryLabel.setText("FINANCES");
+            pageTitle.setText("Invest money in Bitcoins");
+            headerIcon.setImageResource(R.drawable.finances_icon);
+            headerBackground.setBackgroundColor(Color.parseColor("#F89767"));
+
+            data.initShortGoalsFinances();
+        }
+        if (Category == 3){
+            Log.d("ENTER", "03" );
+            categoryLabel.setText("CAREER");
+            pageTitle.setText("Update my Linkdin Account");
+            headerIcon.setImageResource(R.drawable.career_icon);
+            headerBackground.setBackgroundColor(Color.parseColor("#354AA4"));
+
+            data.initShortGoalsCareer();
+        }
+        if (Category == 4){
+            categoryLabel.setText("FUN AND RECREATION");
+            pageTitle.setText("Learn Snowboard");
+            headerIcon.setImageResource(R.drawable.fun_icon);
+            headerBackground.setBackgroundColor(Color.parseColor("#17E09D"));
+
+            data.initShortGoalsFun();
+        }
+        if (Category == 5){
+            categoryLabel.setText("PERSONAL DEVELOPMENT");
+            pageTitle.setText("Learn VR concept");
+            headerIcon.setImageResource(R.drawable.personal_dev_icon);
+            headerBackground.setBackgroundColor(Color.parseColor("#F15864"));
+
+            data.initShortGoalsPersonal();
+        }
+        if (Category == 6){
+            categoryLabel.setText("SPIRITUAL");
+            pageTitle.setText("Learn Indu Lessons");
+            headerIcon.setImageResource(R.drawable.spiritual_icon);
+            headerBackground.setBackgroundColor(Color.parseColor("#796DB6"));
+
+            data.initShortGoalsSpiritual();
+        }
+
+//        data.initShortGoalsHealth();
+
+        initRecyclerView();
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,20 +138,6 @@ public class ShortTermPage extends AppCompatActivity {
         });
     }
 
-    public void changeBackgroundSelected() {
-        cardSelected.setBackgroundColor(Color.parseColor("#FFD58B"));
-        titleSelected.setTextColor(Color.parseColor("#374FCA"));
-        contentSelected.setTextColor(Color.parseColor("#909CDA"));
-        dateSelected.setTextColor(Color.parseColor("#FF4B8D"));
-    }
-    public void changeBackgroundUnselected() {
-
-        cardSelected.setBackgroundColor(Color.parseColor("#EFEFEF"));
-        titleSelected.setTextColor(Color.BLACK);
-        contentSelected.setTextColor(Color.BLACK);
-        dateSelected.setTextColor(Color.BLACK);
-    }
-
     public void openLongTermGoals(){
         Intent intent = new Intent(this, LongTermPage.class);
         startActivity(intent);
@@ -107,5 +153,11 @@ public class ShortTermPage extends AppCompatActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+    private void initRecyclerView(){
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        RecyclerViewShortTermGoals adapter = new RecyclerViewShortTermGoals(this, Category, data.getParentGoalID(), data.getShortGoalTitle(),data.getShortGoalDescription(),data.getShortGoalDeadline(), data.getShortGoalstatus());
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

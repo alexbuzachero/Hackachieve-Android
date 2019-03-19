@@ -11,11 +11,11 @@ import android.widget.TextView;
 
 public class ShortTermPageFun extends AppCompatActivity {
 
-    private LinearLayout cardSelected;
-    private TextView titleSelected;
-    private TextView contentSelected;
-    private TextView dateSelected;
-    private Boolean cardClicked = false;
+//    private LinearLayout cardSelected;
+//    private TextView titleSelected;
+//    private TextView contentSelected;
+//    private TextView dateSelected;
+//    private Boolean cardClicked = false;
 
     private ImageView ongoingButton;
     private ImageView addButton;
@@ -34,10 +34,10 @@ public class ShortTermPageFun extends AppCompatActivity {
 
         //        Defining Cards
 
-        cardSelected = (LinearLayout) findViewById(R.id.shortGoalClicked);
-        titleSelected = (TextView) findViewById(R.id.shortTermTitleCard);
-        contentSelected = (TextView) findViewById(R.id.shortTermDescriptionCard);
-        dateSelected = (TextView) findViewById(R.id.shortTearmDeadlineCard);
+//        cardSelected = (LinearLayout) findViewById(R.id.shortGoalClicked);
+//        titleSelected = (TextView) findViewById(R.id.shortTermTitleCard);
+//        contentSelected = (TextView) findViewById(R.id.shortTermDescriptionCard);
+//        dateSelected = (TextView) findViewById(R.id.shortTearmDeadlineCard);
 
         //        Add Click listener to the cards
 //        cardSelected.setOnClickListener(new View.OnClickListener() {
@@ -77,19 +77,19 @@ public class ShortTermPageFun extends AppCompatActivity {
         });
     }
 
-    public void changeBackgroundSelected() {
-        cardSelected.setBackgroundColor(Color.parseColor("#FFD58B"));
-        titleSelected.setTextColor(Color.parseColor("#374FCA"));
-        contentSelected.setTextColor(Color.parseColor("#909CDA"));
-        dateSelected.setTextColor(Color.parseColor("#FF4B8D"));
-    }
-    public void changeBackgroundUnselected() {
-
-        cardSelected.setBackgroundColor(Color.parseColor("#EFEFEF"));
-        titleSelected.setTextColor(Color.BLACK);
-        contentSelected.setTextColor(Color.BLACK);
-        dateSelected.setTextColor(Color.BLACK);
-    }
+//    public void changeBackgroundSelected() {
+//        cardSelected.setBackgroundColor(Color.parseColor("#FFD58B"));
+//        titleSelected.setTextColor(Color.parseColor("#374FCA"));
+//        contentSelected.setTextColor(Color.parseColor("#909CDA"));
+//        dateSelected.setTextColor(Color.parseColor("#FF4B8D"));
+//    }
+//    public void changeBackgroundUnselected() {
+//
+//        cardSelected.setBackgroundColor(Color.parseColor("#EFEFEF"));
+//        titleSelected.setTextColor(Color.BLACK);
+//        contentSelected.setTextColor(Color.BLACK);
+//        dateSelected.setTextColor(Color.BLACK);
+//    }
 
     public void openLongTermGoals(){
         Intent intent = new Intent(this, LongTermPage.class);

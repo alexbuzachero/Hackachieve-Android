@@ -1,6 +1,7 @@
 package com.example.hackachieve;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
@@ -36,17 +37,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ArrayList<Integer> mBoard_id = new ArrayList<Integer>();
     private Context mContext;
 
+    FetchData data = new FetchData();
+
    private ProgressBar progress;
 //    private String iconCard;
 
+    //create a Bundle object
+    Bundle extras = new Bundle();
 
-    public RecyclerViewAdapter(LongTermPage longTermPage, ArrayList<String> cardTitle, ArrayList<String> goalsCompleted, ArrayList<String> totalGoals, ArrayList<String> dataCompleted, ArrayList<Integer> mBoard_id) {
+    public RecyclerViewAdapter(ArrayList<String> cardTitle, ArrayList<String> goalsCompleted, ArrayList<String> totalGoals, ArrayList<String> dataCompleted, ArrayList<Integer> mBoard_id, Context mContext) {
         CardTitle = cardTitle;
         GoalsCompleted = goalsCompleted;
         TotalGoals = totalGoals;
         DataCompleted = dataCompleted;
         this.mBoard_id = mBoard_id;
-        mContext = longTermPage;
+        this.mContext = mContext;
     }
 
     @NonNull
@@ -62,7 +67,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @SuppressLint("ResourceAsColor")
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int position) {
 
 //        Taking the goals overall to insert in the progress bar
         Double gCompleted = Double.parseDouble(GoalsCompleted.get(position));
@@ -84,10 +89,28 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             viewHolder.iconCard.setImageResource(R.drawable.health_icon_color);
             viewHolder.categoryLabel.setTextColor(Color.parseColor("#5DC8E2"));
 
+
+
             viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    openShortGoalsPageHealth();
+                    extras.putInt("CATEGORY", 1);
+                    extras.putString("PAGETITLE",CardTitle.get(position));
+
+                    Intent intent = new Intent(mContext, ShortTermPage.class);
+
+                    intent.putExtras(extras);
+                    mContext.startActivity(intent);
+
+                    Activity activity = (Activity) mContext;
+                    activity.startActivity(intent);
+
+                    activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+                    data.initShortGoalsHealth();
+
+//                    openShortGoalsPageHealth();
+//                    openShortGoalsPage();
                 }
             });
         }
@@ -101,7 +124,28 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    openShortGoalsPageFinance();
+                    extras.putInt("CATEGORY", 2);
+                    extras.putString("PAGETITLE",CardTitle.get(position));
+
+                    Intent intent = new Intent(mContext, ShortTermPage.class);
+
+                    intent.putExtras(extras);
+                    mContext.startActivity(intent);
+
+
+
+                    data.initShortGoalsFinances();
+
+
+                    Activity activity = (Activity) mContext;
+                    activity.startActivity(intent);
+
+                    activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+                    data.initShortGoalsHealth();
+
+//                    openShortGoalsPageFinance();
+//                    openShortGoalsPage();
                 }
             });
 
@@ -116,7 +160,22 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    openShortGoalsPageCareer();
+                    extras.putInt("CATEGORY", 3);
+                    extras.putString("PAGETITLE",CardTitle.get(position));
+
+                    Intent intent = new Intent(mContext, ShortTermPage.class);
+
+                    intent.putExtras(extras);
+                    mContext.startActivity(intent);
+
+                    Activity activity = (Activity) mContext;
+                    activity.startActivity(intent);
+
+                    activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+                    data.initShortGoalsHealth();
+//                    openShortGoalsPageCareer();
+//                    openShortGoalsPage();
                 }
             });
         }
@@ -130,7 +189,22 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    openShortGoalsPageFun();
+                    extras.putInt("CATEGORY", 4);
+                    extras.putString("PAGETITLE",CardTitle.get(position));
+
+                    Intent intent = new Intent(mContext, ShortTermPage.class);
+
+                    intent.putExtras(extras);
+                    mContext.startActivity(intent);
+
+                    Activity activity = (Activity) mContext;
+                    activity.startActivity(intent);
+
+                    activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+                    data.initShortGoalsHealth();
+//                    openShortGoalsPageFun();
+//                    openShortGoalsPage();
                 }
             });
         }
@@ -144,7 +218,22 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    openShortGoalsPagePersonalDev();
+                    extras.putInt("CATEGORY", 5);
+                    extras.putString("PAGETITLE",CardTitle.get(position));
+
+                    Intent intent = new Intent(mContext, ShortTermPage.class);
+
+                    intent.putExtras(extras);
+                    mContext.startActivity(intent);
+
+                    Activity activity = (Activity) mContext;
+                    activity.startActivity(intent);
+
+                    activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+                    data.initShortGoalsHealth();
+//                    openShortGoalsPagePersonalDev();
+//                    openShortGoalsPage();
                 }
             });
         }
@@ -158,7 +247,22 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    openShortGoalsPageSpiritual();
+                    extras.putInt("CATEGORY", 6);
+                    extras.putString("PAGETITLE",CardTitle.get(position));
+
+                    Intent intent = new Intent(mContext, ShortTermPage.class);
+
+                    intent.putExtras(extras);
+                    mContext.startActivity(intent);
+
+                    Activity activity = (Activity) mContext;
+                    activity.startActivity(intent);
+
+                    activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+                    data.initShortGoalsHealth();
+//                    openShortGoalsPageSpiritual();
+//                    openShortGoalsPage();
                 }
             });
         }
@@ -202,37 +306,47 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
             public void openShortGoalsPageHealth(){
-            Intent intent = new Intent(mContext, ShortTermPageHealth.class);
-            mContext.startActivity(intent);
+            //            Intent intent = new Intent(mContext, ShortTermPageHealth.class);
+                Intent intent = new Intent(mContext, ShortTermPage.class);
+
+//                intent.putExtra("Category", 1);
+//                intent.putExtra("pageTitle", CardTitle.get(position));
+
+                mContext.startActivity(intent);
 //            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
 
     public void openShortGoalsPageFinance(){
-        Intent intent = new Intent(mContext, ShortTermPageFinance.class);
+//        Intent intent = new Intent(mContext, ShortTermPageFinance.class);
+        Intent intent = new Intent(mContext, ShortTermPage.class);
         mContext.startActivity(intent);
 //            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     public void openShortGoalsPageFun(){
-        Intent intent = new Intent(mContext, ShortTermPageFun.class);
+//        Intent intent = new Intent(mContext, ShortTermPageFun.class);
+        Intent intent = new Intent(mContext, ShortTermPage.class);
         mContext.startActivity(intent);
 //            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     public void openShortGoalsPageCareer(){
-        Intent intent = new Intent(mContext, ShortTermPageCareer.class);
+//        Intent intent = new Intent(mContext, ShortTermPageCareer.class);
+        Intent intent = new Intent(mContext, ShortTermPage.class);
         mContext.startActivity(intent);
 //            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     public void openShortGoalsPagePersonalDev(){
-        Intent intent = new Intent(mContext, ShortTermPagePersonalDev.class);
+//        Intent intent = new Intent(mContext, ShortTermPagePersonalDev.class);
+        Intent intent = new Intent(mContext, ShortTermPage.class);
         mContext.startActivity(intent);
 //            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     public void openShortGoalsPageSpiritual(){
-        Intent intent = new Intent(mContext, ShortTermPageSpiritual.class);
+//        Intent intent = new Intent(mContext, ShortTermPageSpiritual.class);
+        Intent intent = new Intent(mContext, ShortTermPage.class);
         mContext.startActivity(intent);
 //            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }

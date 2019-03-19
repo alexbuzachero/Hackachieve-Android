@@ -4,6 +4,8 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.content.Intent;
 import android.widget.ImageView;
@@ -12,11 +14,7 @@ import android.widget.TextView;
 
 public class ShortTermPageHealth extends AppCompatActivity {
 
-    private LinearLayout cardSelected;
-    private TextView titleSelected;
-    private TextView contentSelected;
-    private TextView dateSelected;
-    private Boolean cardClicked = false;
+    FetchData data = new FetchData();
 
     private ImageView ongoingButton;
     private ImageView addButton;
@@ -28,32 +26,14 @@ public class ShortTermPageHealth extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_short_term_page_health);
 
+        data.initShortGoalsHealth();
+
+        initRecyclerView();
+
         ongoingButton = (ImageView) findViewById(R.id.ongoingIcon);
         addButton = (ImageView) findViewById(R.id.addIcon);
         completedButton = (ImageView) findViewById(R.id.completedIcon);
         backButton = (ImageView) findViewById(R.id.backButton);
-
-        //        Defining Cards
-
-        cardSelected = (LinearLayout) findViewById(R.id.shortGoalClicked);
-        titleSelected = (TextView) findViewById(R.id.shortTermTitleCard);
-        contentSelected = (TextView) findViewById(R.id.shortTermDescriptionCard);
-        dateSelected = (TextView) findViewById(R.id.shortTearmDeadlineCard);
-
-        //        Add Click listener to the cards
-//        cardSelected.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (cardClicked == false){
-//                    changeBackgroundSelected();
-//                    cardClicked = true;
-//
-//                } else {
-//                    changeBackgroundUnselected();
-//                    cardClicked = false;
-//                }
-//            }
-//        });
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,20 +58,6 @@ public class ShortTermPageHealth extends AppCompatActivity {
         });
     }
 
-    public void changeBackgroundSelected() {
-        cardSelected.setBackgroundColor(Color.parseColor("#FFD58B"));
-        titleSelected.setTextColor(Color.parseColor("#374FCA"));
-        contentSelected.setTextColor(Color.parseColor("#909CDA"));
-        dateSelected.setTextColor(Color.parseColor("#FF4B8D"));
-    }
-    public void changeBackgroundUnselected() {
-
-        cardSelected.setBackgroundColor(Color.parseColor("#EFEFEF"));
-        titleSelected.setTextColor(Color.BLACK);
-        contentSelected.setTextColor(Color.BLACK);
-        dateSelected.setTextColor(Color.BLACK);
-    }
-
     public void openLongTermGoals(){
         Intent intent = new Intent(this, LongTermPage.class);
         startActivity(intent);
@@ -107,5 +73,11 @@ public class ShortTermPageHealth extends AppCompatActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+    private void initRecyclerView(){
+//        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+//        RecyclerViewShortTermGoals adapter = new RecyclerViewShortTermGoals(this, data.getParentGoalID(), data.getShortGoalTitle(),data.getShortGoalDescription(),data.getShortGoalDeadline(), data.getShortGoalstatus());
+//        recyclerView.setAdapter(adapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }
