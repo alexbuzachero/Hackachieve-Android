@@ -71,7 +71,7 @@ public class ShortTermPage extends AppCompatActivity {
         if (Category == 2){
             Log.d("ENTER", "02" );
             categoryLabel.setText("FINANCES");
-            pageTitle.setText("Invest money in Bitcoins");
+            pageTitle.setText(Title);
             headerIcon.setImageResource(R.drawable.finances_icon);
             headerBackground.setBackgroundColor(Color.parseColor("#F89767"));
 
@@ -80,7 +80,7 @@ public class ShortTermPage extends AppCompatActivity {
         if (Category == 3){
             Log.d("ENTER", "03" );
             categoryLabel.setText("CAREER");
-            pageTitle.setText("Update my Linkdin Account");
+            pageTitle.setText(Title);
             headerIcon.setImageResource(R.drawable.career_icon);
             headerBackground.setBackgroundColor(Color.parseColor("#354AA4"));
 
@@ -88,7 +88,7 @@ public class ShortTermPage extends AppCompatActivity {
         }
         if (Category == 4){
             categoryLabel.setText("FUN AND RECREATION");
-            pageTitle.setText("Learn Snowboard");
+            pageTitle.setText(Title);
             headerIcon.setImageResource(R.drawable.fun_icon);
             headerBackground.setBackgroundColor(Color.parseColor("#17E09D"));
 
@@ -96,7 +96,7 @@ public class ShortTermPage extends AppCompatActivity {
         }
         if (Category == 5){
             categoryLabel.setText("PERSONAL DEVELOPMENT");
-            pageTitle.setText("Learn VR concept");
+            pageTitle.setText(Title);
             headerIcon.setImageResource(R.drawable.personal_dev_icon);
             headerBackground.setBackgroundColor(Color.parseColor("#F15864"));
 
@@ -104,7 +104,7 @@ public class ShortTermPage extends AppCompatActivity {
         }
         if (Category == 6){
             categoryLabel.setText("SPIRITUAL");
-            pageTitle.setText("Learn Indu Lessons");
+            pageTitle.setText(Title);
             headerIcon.setImageResource(R.drawable.spiritual_icon);
             headerBackground.setBackgroundColor(Color.parseColor("#796DB6"));
 

@@ -90,14 +90,14 @@ private ArrayList<String> CardTitle = new ArrayList<>();
         Board_id.add(1);
 
 
-        CardTitle.add("Invest money in Bitcoins");
+        CardTitle.add("Invest in Bitcoins");
         GoalsCompleted.add("3");
         TotalGoals.add("9");
         DataCompleted.add("2019-02-14T16:36:25.019Z");
         Board_id.add(2);
 
 
-        CardTitle.add("Updtate my Linkdin Account");
+        CardTitle.add("Updtate my Resume");
         GoalsCompleted.add("1");
         TotalGoals.add("8");
         DataCompleted.add("2019-05-14T16:36:25.019Z");
@@ -111,7 +111,7 @@ private ArrayList<String> CardTitle = new ArrayList<>();
         Board_id.add(4);
 
 
-        CardTitle.add("Learn VR concept");
+        CardTitle.add("Study React");
         GoalsCompleted.add("5");
         TotalGoals.add("6");
         DataCompleted.add("2019-04-14T16:36:25.019Z");
@@ -141,13 +141,13 @@ private ArrayList<String> CardTitle = new ArrayList<>();
         DataCompleted.add("2019-02-14T16:36:25.019Z");
         Board_id.add(3);
 
-        CardTitle.add("Learn Bitcoins Investments");
+        CardTitle.add("Invest in Bitcoins");
         GoalsCompleted.add("3");
         TotalGoals.add("3");
         DataCompleted.add("2019-05-14T16:36:25.019Z");
         Board_id.add(3);
 
-        CardTitle.add("Study Game of Thrones Teory");
+        CardTitle.add("Study React");
         GoalsCompleted.add("2");
         TotalGoals.add("2");
         DataCompleted.add("2019-08-14T16:36:25.019Z");
