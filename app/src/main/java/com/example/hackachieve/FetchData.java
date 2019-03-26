@@ -23,9 +23,10 @@ public class FetchData extends AsyncTask<Void,Void,Void> {
     String singleParsed = "";
 
 //    Database Data
-private ArrayList<String> CardTitle = new ArrayList<>();
+
 
     //Long Term Goals Variables
+    private ArrayList<String> CardTitle = new ArrayList<>();
     private ArrayList<String> GoalsCompleted = new ArrayList<>();
     private ArrayList<String> TotalGoals = new ArrayList<>();
     private ArrayList<String> DataCompleted = new ArrayList<>();
@@ -79,6 +80,30 @@ private ArrayList<String> CardTitle = new ArrayList<>();
     public ArrayList<Integer> getShortGoalstatus() {
         return ShortGoalstatus;
     }
+
+//    Getters Long Term Goals Variables
+
+
+    public void setCardTitle(String cardTitle) {
+        CardTitle.add(cardTitle);
+    }
+
+    public void setGoalsCompleted(String goalsCompleted) {
+        GoalsCompleted.add(goalsCompleted);
+    }
+
+    public void setTotalGoals(String totalGoals) {
+        TotalGoals.add(totalGoals);
+    }
+
+    public void setDataCompleted(String dataCompleted) {
+        DataCompleted.add(dataCompleted);
+    }
+
+    public void setBoard_id(Integer board_id) {
+        Board_id.add(board_id);
+    }
+
 
     //    Initialzing the variables with the user content
     public void initGoals(){
@@ -361,7 +386,7 @@ private ArrayList<String> CardTitle = new ArrayList<>();
     }
 
 
-//    Getting data from the API
+    //    Getting data from the API
     @Override
     protected Void doInBackground(Void... voids) {
 

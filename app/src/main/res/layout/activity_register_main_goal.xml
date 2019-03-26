@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondaryPallete04"
+    android:paddingTop="100dp"
+    tools:context=".RegisterMainGoal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/monocolorPallete04"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="New Main Goal"
+            android:textSize="26sp"
+            app:fontFamily="sans-serif-condensed" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="20sp"
+            android:text="Main Goal Name"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/goalTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="20sp"
+            android:text="Category"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/goalCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="20sp"
+            android:text="Due Date"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/goalDueDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/createGoalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40sp"
+            android:background="@color/secondaryPallete02"
+            android:text="Create Main Goal"
+            android:textColor="@color/monocolorPallete04"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

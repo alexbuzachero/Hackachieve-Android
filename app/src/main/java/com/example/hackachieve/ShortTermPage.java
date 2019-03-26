@@ -34,6 +34,9 @@ public class ShortTermPage extends AppCompatActivity {
     private Integer Category;
     private String Title;
 
+    //create a Bundle object
+    Bundle extras = new Bundle();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,11 +132,18 @@ public class ShortTermPage extends AppCompatActivity {
             }
         });
 
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openRegisterShortGoal();
+            }
+        });
+
 
         completedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openLongTermGoalsCompleted();
+                openShortTermGoalsCompleted();
             }
         });
     }
@@ -144,8 +154,19 @@ public class ShortTermPage extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
-    public void openLongTermGoalsCompleted(){
+    public void openRegisterShortGoal(){
+        Intent intent = new Intent(this, RegisterShortGoal.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_up, R.anim.static_position);
+    }
+
+    public void openShortTermGoalsCompleted(){
+        extras.putInt("CATEGORY", Category);
+        extras.putString("PAGETITLE", Title);
+
         Intent intent = new Intent(this, ShortTermPageCompleted.class);
+
+        intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }

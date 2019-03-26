@@ -9,51 +9,71 @@
     tools:context=".ShortTermPage">
 
     <GridLayout
+        android:id="@+id/headerBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:background="@color/mainPallete02">
+        android:background="@color/mainPallete02"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="43dp"
-            android:layout_height="42dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="8dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/health_icon" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <GridLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="60dp"
-            android:orientation="vertical"
-            android:paddingTop="5dp">
+            android:layout_marginLeft="20dp">
 
-            <TextView
-                android:id="@+id/categoryLabel"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="HEALTH"
-                android:textColor="@color/monocolorPallete04"
-                android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/cardTitle"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Get in shape for skiing"
-                android:textColor="@color/monocolorPallete04"
-                android:textSize="20sp"
-                app:fontFamily="@font/alegreya_sans_medium_italic" />
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/headerIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/health_icon" />
+
+                    <TextView
+                        android:id="@+id/categoryLabel"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="HEALTH"
+                        android:textColor="@color/monocolorPallete04"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/amaranth_bold" />
+
+                </GridLayout>
+
+                <TextView
+                    android:id="@+id/cardTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Get in shape for skiing"
+                    android:textColor="@color/monocolorPallete04"
+                    android:textSize="22sp"
+                    app:fontFamily="@font/alegreya_sans_medium_italic" />
+
+
+            </LinearLayout>
+        </GridLayout>
     </GridLayout>
 
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="535dp"
+        android:layout_height="497dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
 
@@ -100,7 +120,7 @@
                 android:layout_weight="1"
                 android:contentDescription="ongoing"
                 android:paddingTop="8dp"
-                app:srcCompat="@drawable/current_goal_active" />
+                app:srcCompat="@drawable/current_goal" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -109,7 +129,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="CURRENT GOALS"
-                android:textColor="@color/mainPallete01"
+                android:textColor="#999999"
                 android:textSize="10sp"
                 app:fontFamily="@font/amaranth_bold" />
 
@@ -120,13 +140,13 @@
             android:id="@+id/addIcon"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="40dp"
             android:layout_marginBottom="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="0"
             android:contentDescription="add"
-            app:srcCompat="@drawable/button_create_ok" />
+            app:srcCompat="@drawable/add_goal" />
 
         <LinearLayout
             android:layout_width="90dp"
@@ -141,7 +161,7 @@
                 android:layout_weight="1"
                 android:contentDescription="ongoing"
                 android:paddingTop="8dp"
-                app:srcCompat="@drawable/completed_goal" />
+                app:srcCompat="@drawable/completed_goal_active" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -150,7 +170,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="COMPLETED GOALS"
-                android:textColor="#999999"
+                android:textColor="@color/mainPallete01"
                 android:textSize="10sp"
                 app:fontFamily="@font/amaranth_bold" />
 

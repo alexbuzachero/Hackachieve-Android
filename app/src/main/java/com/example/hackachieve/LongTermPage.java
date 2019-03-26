@@ -43,6 +43,13 @@ public class LongTermPage extends AppCompatActivity{
             }
         });
 
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openRegisterMainGoal();
+            }
+        });
+
     }
 
     public void openShortGoalsPageFinance(){
@@ -55,6 +62,12 @@ public class LongTermPage extends AppCompatActivity{
         Intent intent = new Intent(this, LongTermPageCompleted.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    public void openRegisterMainGoal(){
+        Intent intent = new Intent(this, RegisterMainGoal.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_up, R.anim.static_position);
     }
 
     private void initRecyclerView(){
