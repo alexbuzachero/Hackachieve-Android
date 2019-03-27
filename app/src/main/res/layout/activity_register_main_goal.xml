@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/secondaryPallete04"
+    android:background="@color/HeaderBackground"
     android:paddingTop="100dp"
     tools:context=".RegisterMainGoal">
 
@@ -31,8 +31,8 @@
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10sp"
             android:layout_marginTop="20sp"
+            android:layout_marginBottom="10sp"
             android:text="Main Goal Name"
             android:textSize="18sp" />
 
@@ -48,8 +48,8 @@
             android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10sp"
             android:layout_marginTop="20sp"
+            android:layout_marginBottom="10sp"
             android:text="Category"
             android:textSize="18sp" />
 
@@ -65,8 +65,8 @@
             android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10sp"
             android:layout_marginTop="20sp"
+            android:layout_marginBottom="10sp"
             android:text="Due Date"
             android:textSize="18sp" />
 

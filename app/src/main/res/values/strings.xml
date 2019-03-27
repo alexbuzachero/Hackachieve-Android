@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Hackachieve</string>
     <string name="title_activity_register_page">RegisterPage</string>
+    <string name="logout_name">Logout</string>
 </resources>

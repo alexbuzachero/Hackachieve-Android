@@ -5,26 +5,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
-
-public class RegisterPage extends AppCompatActivity {
+public class InitialCategoryScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_page);
+        setContentView(R.layout.activity_initial_category_screen);
 
-        Button registerButton = (Button) findViewById(R.id.registerConfirmButton);
+        LinearLayout registerCategory = (LinearLayout) findViewById(R.id.categoryContainer);
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
+        registerCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openCategoryScreen();
+                openRegisterScreen();
             }
         });
     }
-    public void openCategoryScreen(){
-        Intent intent = new Intent(this, InitialCategoryScreen.class);
+    public void openRegisterScreen(){
+        Intent intent = new Intent(this, RegisterMainGoal.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_up, R.anim.static_position);
     }

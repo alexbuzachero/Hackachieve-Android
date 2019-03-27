@@ -1,12 +1,19 @@
 package com.example.hackachieve;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.content.Intent;
 import android.widget.ImageView;
+
+import android.support.v7.widget.Toolbar;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,6 +30,7 @@ public class LongTermPage extends AppCompatActivity{
 
     FetchData data = new FetchData();
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +39,14 @@ public class LongTermPage extends AppCompatActivity{
         data.initGoals();
         initRecyclerView();
 
+//        Adding ToolBar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
+
+//        ----------------
 
         ongoingButton = (ImageView) findViewById(R.id.ongoingIcon);
         addButton = (ImageView) findViewById(R.id.addIcon);
@@ -52,6 +68,31 @@ public class LongTermPage extends AppCompatActivity{
 
     }
 
+//    ToolBar Function
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        logout();
+        return super.onOptionsItemSelected(item);
+    }
+
+
+//    ----------------------------------------------------------
+
+//    private void setSupportActionBar(Toolbar toolbar) {
+//    }
+public void logout(){
+    Intent intent = new Intent(this, MenuPage.class);
+    startActivity(intent);
+//    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+}
     public void openShortGoalsPageFinance(){
         Intent intent = new Intent(this, ShortTermPageFinance.class);
         startActivity(intent);

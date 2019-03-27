@@ -6,14 +6,20 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class LongTermPageCompleted extends AppCompatActivity {
 
     //        Creating longTermCardVariable(one variable for each card)
     private ImageView ongoingButton;
     private ImageView addButton;
+    private TextView pageTitle;
 
     FetchData data = new FetchData();
 
@@ -25,6 +31,17 @@ public class LongTermPageCompleted extends AppCompatActivity {
         data.initGoalsCompleted();
         initRecyclerView();
 
+        //        Adding ToolBar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
+
+        TextView pageTitle = (TextView) findViewById(R.id.pageTitle);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
+//        pageTitle.setText("Main Goals Completed");
+//        ----------------
+
         ongoingButton = (ImageView) findViewById(R.id.ongoingIcon);
         ongoingButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +49,30 @@ public class LongTermPageCompleted extends AppCompatActivity {
                 openLongTermGoals();
             }
         });
+    }
+
+    //    ToolBar Function
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        logout();
+        return super.onOptionsItemSelected(item);
+    }
+
+
+//    ----------------------------------------------------------
+
+    public void logout(){
+        Intent intent = new Intent(this, MenuPage.class);
+        startActivity(intent);
+//    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     private void initRecyclerView(){
