@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
     android:layout_marginBottom="10dp"
-    android:background="@color/colorUnselected"
+    android:background="@color/CompletedBackground"
     android:orientation="vertical"
     android:paddingLeft="10dp"
     android:paddingTop="10dp"
