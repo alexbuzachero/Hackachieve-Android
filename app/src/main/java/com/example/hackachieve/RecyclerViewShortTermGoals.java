@@ -4,16 +4,12 @@ import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class RecyclerViewShortTermGoals extends RecyclerView.Adapter<RecyclerViewShortTermGoals.ViewHolder>{
@@ -105,8 +101,6 @@ public class RecyclerViewShortTermGoals extends RecyclerView.Adapter<RecyclerVie
             viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#F4F4FC"));
             viewHolder.starIcon.setImageResource(R.drawable.star_icon);
         }
-
-//       Add card listener Holder
     }
 
     @Override
@@ -116,7 +110,6 @@ public class RecyclerViewShortTermGoals extends RecyclerView.Adapter<RecyclerVie
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
-
         TextView ShortGoalTitle;
         TextView ShortGoalDescription;
         TextView ShortGoalDeadline;
@@ -124,10 +117,6 @@ public class RecyclerViewShortTermGoals extends RecyclerView.Adapter<RecyclerVie
         ImageView starIcon;
         LinearLayout shortTermCardBackground;
 
-
-
-
-        //        @SuppressLint("WrongViewCast")
         public ViewHolder(View itemView) {
             super(itemView);
 

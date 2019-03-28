@@ -8,40 +8,6 @@
     android:orientation="vertical"
     tools:context=".LongTermPageCompleted">
 
-
-    <!--<GridLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="80dp"-->
-        <!--android:layout_marginBottom="10dp"-->
-        <!--android:background="@color/HeaderBackground"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:paddingLeft="20dp"-->
-        <!--android:paddingRight="20dp">-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/longTermTitle"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_row="0"-->
-            <!--android:layout_column="0"-->
-            <!--android:gravity="bottom|left"-->
-            <!--android:paddingBottom="15dp"-->
-            <!--android:text="Main Goals"-->
-            <!--android:textColor="@color/monocolorPallete04"-->
-            <!--android:textSize="22sp" />-->
-
-        <!--<ImageView-->
-            <!--android:id="@+id/imageView9"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="bottom|left"-->
-            <!--android:layout_marginLeft="170dp"-->
-            <!--android:paddingBottom="12dp"-->
-            <!--app:srcCompat="@drawable/avatar_johnsnow" />-->
-
-
-    <!--</GridLayout>-->
-
     <include
         android:id="@+id/app_bar"
         layout="@layout/app_bar">
@@ -56,89 +22,6 @@
         android:layout_marginRight="20dp">
 
     </android.support.v7.widget.RecyclerView>
-
-    <!--<ScrollView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="549dp"-->
-    <!--android:layout_marginLeft="20dp"-->
-    <!--android:layout_marginRight="20dp"-->
-    <!--android:layout_marginBottom="2dp"-->
-    <!--android:background="@color/monocolorPallete04">-->
-
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:background="@color/monocolorPallete03"-->
-    <!--android:orientation="vertical">-->
-
-    <!--<android.support.v7.widget.CardView-->
-    <!--android:id="@+id/longTermFitnessID"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:clickable="true"-->
-    <!--app:cardBackgroundColor="@color/monocolorPallete03"-->
-    <!--app:cardElevation="2dp">-->
-
-    <!--<include layout="@layout/activity_long_term_card_health" />-->
-
-
-    <!--</android.support.v7.widget.CardView>-->
-
-    <!--<android.support.v7.widget.CardView-->
-    <!--android:id="@+id/financeID"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:clickable="true"-->
-    <!--app:cardBackgroundColor="@color/monocolorPallete03">-->
-
-    <!--<include layout="@layout/activity_long_term_card_finance" />-->
-
-    <!--</android.support.v7.widget.CardView>-->
-
-    <!--<android.support.v7.widget.CardView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--app:cardBackgroundColor="@color/monocolorPallete03">-->
-
-    <!--<include layout="@layout/activity_long_term_card_spiritual" />-->
-
-    <!--</android.support.v7.widget.CardView>-->
-
-    <!--<android.support.v7.widget.CardView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--app:cardBackgroundColor="@color/monocolorPallete03">-->
-
-    <!--<include layout="@layout/activity_long_term_card_career" />-->
-
-    <!--</android.support.v7.widget.CardView>-->
-
-    <!--<android.support.v7.widget.CardView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--app:cardBackgroundColor="@color/monocolorPallete03">-->
-
-    <!--<include layout="@layout/activity_long_term_card_personal_dev" />-->
-
-    <!--</android.support.v7.widget.CardView>-->
-
-    <!--<android.support.v7.widget.CardView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--app:cardBackgroundColor="@color/monocolorPallete03">-->
-
-    <!--<include layout="@layout/activity_long_term_card_fun" />-->
-
-    <!--</android.support.v7.widget.CardView>-->
-
-    <!--</LinearLayout>-->
-    <!--</ScrollView>-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -177,7 +60,6 @@
 
         </LinearLayout>
 
-
         <ImageView
             android:id="@+id/addIcon"
             android:layout_width="60dp"
@@ -215,7 +97,6 @@
                 android:textColor="@color/mainPallete01"
                 android:textSize="10sp"
                 app:fontFamily="@font/amaranth_bold" />
-
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

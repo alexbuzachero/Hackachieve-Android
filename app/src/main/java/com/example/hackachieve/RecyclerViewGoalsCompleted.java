@@ -12,7 +12,6 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class RecyclerViewGoalsCompleted extends RecyclerView.Adapter<RecyclerViewGoalsCompleted.ViewHolder>{
@@ -23,9 +22,7 @@ public class RecyclerViewGoalsCompleted extends RecyclerView.Adapter<RecyclerVie
     private ArrayList<String> TotalGoals = new ArrayList<>();
     private ArrayList<String> DataCompleted = new ArrayList<>();
     private ArrayList<Integer> mBoard_id = new ArrayList<Integer>();
-
     private ProgressBar progress;
-//    private String iconCard;
 
 
     public RecyclerViewGoalsCompleted(LongTermPageCompleted longTermPage, ArrayList<String> cardTitle, ArrayList<String> goalsCompleted, ArrayList<String> totalGoals, ArrayList<String> dataCompleted, ArrayList<Integer> mBoard_id) {
@@ -104,8 +101,6 @@ public class RecyclerViewGoalsCompleted extends RecyclerView.Adapter<RecyclerVie
             viewHolder.iconCard.setImageResource(R.drawable.spiritual_icon_color);
             viewHolder.categoryLabel.setTextColor(Color.parseColor("#796DB6"));
         }
-
-//       Add card listener Holder
     }
 
     @Override
@@ -125,8 +120,6 @@ public class RecyclerViewGoalsCompleted extends RecyclerView.Adapter<RecyclerVie
         TextView categoryLabel;
 
 
-
-        //        @SuppressLint("WrongViewCast")
         public ViewHolder(View itemView) {
             super(itemView);
             cardTitle = itemView.findViewById(R.id.cardTitle);

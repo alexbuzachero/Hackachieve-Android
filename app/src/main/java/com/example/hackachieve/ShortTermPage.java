@@ -3,7 +3,6 @@ package com.example.hackachieve;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -11,11 +10,7 @@ import android.view.View;
 import android.content.Intent;
 import android.widget.GridLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.support.annotation.Nullable;
-
-import java.util.ArrayList;
 
 public class ShortTermPage extends AppCompatActivity {
 
@@ -113,8 +108,6 @@ public class ShortTermPage extends AppCompatActivity {
 
             data.initShortGoalsSpiritual();
         }
-
-//        data.initShortGoalsHealth();
 
         initRecyclerView();
 

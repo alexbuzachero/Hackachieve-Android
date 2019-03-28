@@ -76,8 +76,6 @@
                 android:ems="8"
                 android:hint="*****"
                 android:inputType="textPassword" />
-
-
         </LinearLayout>
 
         <Button

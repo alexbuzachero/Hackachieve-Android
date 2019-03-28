@@ -15,13 +15,6 @@ import android.widget.ImageView;
 
 import android.support.v7.widget.Toolbar;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONArray;
-
-import java.util.ArrayList;
-
-
 public class LongTermPage extends AppCompatActivity{
 
     private ImageView ongoingButton;
@@ -86,18 +79,11 @@ public class LongTermPage extends AppCompatActivity{
 
 //    ----------------------------------------------------------
 
-//    private void setSupportActionBar(Toolbar toolbar) {
-//    }
+
 public void logout(){
     Intent intent = new Intent(this, MenuPage.class);
     startActivity(intent);
-//    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 }
-    public void openShortGoalsPageFinance(){
-        Intent intent = new Intent(this, ShortTermPageFinance.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-    }
 
     public void openLongTermGoalsCompleted(){
         Intent intent = new Intent(this, LongTermPageCompleted.class);

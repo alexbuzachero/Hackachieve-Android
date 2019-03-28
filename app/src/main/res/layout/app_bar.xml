@@ -13,7 +13,6 @@
     app:theme="@style/CustomToolbarStyle"
     app:titleTextColor="@color/monocolorPallete04">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,11 +34,5 @@
             android:layout_marginLeft="160dp"
             android:contentDescription="Avatar"
             android:src="@drawable/avatar_johnsnow_border2x" />
-
-
     </LinearLayout>
-
-
 </android.support.v7.widget.Toolbar>
-
-<!--    app:theme="@style/CustomToolbarStyle"-->

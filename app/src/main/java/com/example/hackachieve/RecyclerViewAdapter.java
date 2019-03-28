@@ -16,16 +16,9 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.content.Context;
-
-
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-
 
 import java.util.ArrayList;
-
-import static android.support.v4.content.ContextCompat.startActivity;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
 
@@ -40,7 +33,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     FetchData data = new FetchData();
 
    private ProgressBar progress;
-//    private String iconCard;
 
     //create a Bundle object
     Bundle extras = new Bundle();
@@ -57,8 +49,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int position) {
-
-
 
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_long_term_card, viewGroup,false);
         ViewHolder holder = new ViewHolder(view);
@@ -108,9 +98,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
                     data.initShortGoalsHealth();
-
-//                    openShortGoalsPageHealth();
-//                    openShortGoalsPage();
                 }
             });
         }
@@ -131,21 +118,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
                     intent.putExtras(extras);
                     mContext.startActivity(intent);
-
-
-
                     data.initShortGoalsFinances();
-
 
                     Activity activity = (Activity) mContext;
                     activity.startActivity(intent);
-
                     activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-
                     data.initShortGoalsHealth();
-
-//                    openShortGoalsPageFinance();
-//                    openShortGoalsPage();
                 }
             });
 
@@ -172,10 +150,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     activity.startActivity(intent);
 
                     activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-
                     data.initShortGoalsHealth();
-//                    openShortGoalsPageCareer();
-//                    openShortGoalsPage();
                 }
             });
         }
@@ -201,10 +176,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     activity.startActivity(intent);
 
                     activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-
                     data.initShortGoalsHealth();
-//                    openShortGoalsPageFun();
-//                    openShortGoalsPage();
                 }
             });
         }
@@ -232,8 +204,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
                     data.initShortGoalsHealth();
-//                    openShortGoalsPagePersonalDev();
-//                    openShortGoalsPage();
                 }
             });
         }
@@ -259,15 +229,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     activity.startActivity(intent);
 
                     activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-
                     data.initShortGoalsHealth();
-//                    openShortGoalsPageSpiritual();
-//                    openShortGoalsPage();
                 }
             });
         }
-
-//       Add card listener Holder
     }
 
     @Override
@@ -287,9 +252,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView categoryLabel;
         LinearLayout parentLayout;
 
-
-
-        //        @SuppressLint("WrongViewCast")
         public ViewHolder(View itemView) {
             super(itemView);
             cardTitle = itemView.findViewById(R.id.cardTitle);
@@ -304,51 +266,4 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             parentLayout = itemView.findViewById(R.id.longTermCardHealth);
         }
     }
-
-            public void openShortGoalsPageHealth(){
-            //            Intent intent = new Intent(mContext, ShortTermPageHealth.class);
-                Intent intent = new Intent(mContext, ShortTermPage.class);
-
-//                intent.putExtra("Category", 1);
-//                intent.putExtra("pageTitle", CardTitle.get(position));
-
-                mContext.startActivity(intent);
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        }
-
-    public void openShortGoalsPageFinance(){
-//        Intent intent = new Intent(mContext, ShortTermPageFinance.class);
-        Intent intent = new Intent(mContext, ShortTermPage.class);
-        mContext.startActivity(intent);
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-    }
-
-    public void openShortGoalsPageFun(){
-//        Intent intent = new Intent(mContext, ShortTermPageFun.class);
-        Intent intent = new Intent(mContext, ShortTermPage.class);
-        mContext.startActivity(intent);
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-    }
-
-    public void openShortGoalsPageCareer(){
-//        Intent intent = new Intent(mContext, ShortTermPageCareer.class);
-        Intent intent = new Intent(mContext, ShortTermPage.class);
-        mContext.startActivity(intent);
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-    }
-
-    public void openShortGoalsPagePersonalDev(){
-//        Intent intent = new Intent(mContext, ShortTermPagePersonalDev.class);
-        Intent intent = new Intent(mContext, ShortTermPage.class);
-        mContext.startActivity(intent);
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-    }
-
-    public void openShortGoalsPageSpiritual(){
-//        Intent intent = new Intent(mContext, ShortTermPageSpiritual.class);
-        Intent intent = new Intent(mContext, ShortTermPage.class);
-        mContext.startActivity(intent);
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-    }
-
 }

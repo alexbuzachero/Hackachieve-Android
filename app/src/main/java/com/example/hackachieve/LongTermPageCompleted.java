@@ -66,19 +66,15 @@ public class LongTermPageCompleted extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
 //    ----------------------------------------------------------
 
     public void logout(){
         Intent intent = new Intent(this, MenuPage.class);
         startActivity(intent);
-//    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     private void initRecyclerView(){
-//        Log.d(TAG, "initRecyclerView: init recyclerview.");
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-//        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mCardTitle, mGoalsCompleted,mTotalGoals,mDataCompleted, mBoard_id);
         RecyclerViewGoalsCompleted adapter = new RecyclerViewGoalsCompleted(this, data.getCardTitle(), data.getGoalsCompleted(),data.getTotalGoals(),data.getDataCompleted(), data.getBoard_id());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

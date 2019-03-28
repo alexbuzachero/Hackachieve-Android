@@ -14,18 +14,8 @@
         <activity android:name=".InitialCategoryScreen"></activity>
         <activity android:name=".RegisterShortGoal" />
         <activity android:name=".RegisterMainGoal" />
-        <activity android:name=".ShortTermPageCareer" />
-        <activity android:name=".ShortTermPageFun" />
-        <activity android:name=".ShortTermPagePersonalDev" />
-        <activity android:name=".ShortTermPageSpiritual" />
-        <activity android:name=".ShortTermPageFinance" />
-        <activity android:name=".ShortTermPageHealth" />
-        <activity android:name=".ShortTermCardDesactive" />
-        <activity android:name=".ShortTermCardActive" />
-        <activity android:name=".LongTermCardHealth" />
         <activity android:name=".MenuPage" />
         <activity android:name=".ShortTermCardCompleted" />
-        <activity android:name=".LongTermCardCompleted" />
 
         <meta-data
             android:name="com.google.android.actions"

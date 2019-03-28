@@ -23,7 +23,6 @@ public class ShortTermPageCompleted extends AppCompatActivity {
     private String Title;
 
     private ImageView ongoingButton;
-    private ImageView addButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,17 +98,7 @@ public class ShortTermPageCompleted extends AppCompatActivity {
             data.initShortGoalsSpiritual();
         }
 
-
-
-
         ongoingButton = (ImageView) findViewById(R.id.ongoingIcon);
-
-//        ongoingButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openShortTermGoals();
-//            }
-//        });
         ongoingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,11 +107,7 @@ public class ShortTermPageCompleted extends AppCompatActivity {
         });
 
     }
-    public void openShortTermGoals(){
-        Intent intent = new Intent(this, ShortTermPageHealth.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-    }
+
     @Override
     public void finish() {
         super.finish();
