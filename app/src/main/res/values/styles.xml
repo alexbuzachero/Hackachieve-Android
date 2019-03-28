@@ -20,6 +20,11 @@
 
     </style>
 
+    <!--ProgressBar Color-->
+    <style name="AppTheme.ProgressBarColor">
+        <item name="colorAccent">@color/secondaryPallete02</item> <!-- Whatever color you want-->
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

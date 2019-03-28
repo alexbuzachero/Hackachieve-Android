@@ -89,8 +89,8 @@
                 android:gravity="center"
                 android:text="CURRENT GOALS"
                 android:textColor="@color/mainPallete01"
-                android:textSize="10sp"
-                app:fontFamily="@font/amaranth_bold" />
+                android:textSize="9sp"
+                app:fontFamily="@font/lato_bold" />
         </LinearLayout>
 
         <ImageView
@@ -128,8 +128,8 @@
                 android:gravity="center"
                 android:text="COMPLETED GOALS"
                 android:textColor="#999999"
-                android:textSize="10sp"
-                app:fontFamily="@font/amaranth_bold" />
+                android:textSize="9sp"
+                app:fontFamily="@font/lato_bold" />
 
         </LinearLayout>
     </LinearLayout>

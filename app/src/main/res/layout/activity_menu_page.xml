@@ -27,7 +27,7 @@
         android:text="LOG IN"
         android:textColor="@color/monocolorPallete04"
         android:textSize="20sp"
-        app:fontFamily="@font/amaranth_bold" />
+        app:fontFamily="@font/lato_black" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,7 +48,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Email" />
+                android:text="Email"
+                android:textSize="16sp"
+                app:fontFamily="@font/lato_bold" />
 
             <EditText
                 android:id="@+id/emailField"
@@ -65,7 +67,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Password" />
+                android:text="Password"
+                android:textSize="16sp"
+                app:fontFamily="@font/lato_bold" />
 
             <EditText
                 android:id="@+id/passwordField"
@@ -98,7 +102,8 @@
             android:gravity="center_horizontal"
             android:text="Don`t have an account?"
             android:textColor="@color/monocolorPallete02"
-            android:textSize="18sp" />
+            android:textSize="16sp"
+            app:fontFamily="@font/lato" />
 
         <Button
             android:id="@+id/registerButton"
@@ -127,7 +132,8 @@
             android:layout_marginTop="15dp"
             android:gravity="center"
             android:text="You don`t need to memorize new"
-            android:textColor="@color/monocolorPallete04" />
+            android:textColor="@color/monocolorPallete04"
+            app:fontFamily="@font/lato" />
 
         <TextView
             android:id="@+id/textView7"
@@ -135,7 +141,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="password if you don`t want to,"
-            android:textColor="@color/monocolorPallete04" />
+            android:textColor="@color/monocolorPallete04"
+            android:textSize="16sp"
+            app:fontFamily="@font/lato" />
 
         <ImageView
             android:id="@+id/imageView7"

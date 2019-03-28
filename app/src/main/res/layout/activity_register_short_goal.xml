@@ -24,7 +24,7 @@
             android:gravity="center"
             android:text="New Short Goal"
             android:textSize="26sp"
-            app:fontFamily="sans-serif-condensed" />
+            app:fontFamily="@font/lato_black" />
 
         <TextView
             android:id="@+id/textView12"
@@ -33,7 +33,8 @@
             android:layout_marginTop="20sp"
             android:layout_marginBottom="10sp"
             android:text="Short Goal Name"
-            android:textSize="18sp" />
+            android:textSize="16sp"
+            app:fontFamily="@font/lato_bold" />
 
         <EditText
             android:id="@+id/goalTitle"
@@ -50,14 +51,17 @@
             android:layout_marginTop="20sp"
             android:layout_marginBottom="10sp"
             android:text="Short Goal Description"
-            android:textSize="18sp" />
+            android:textSize="16sp"
+            app:fontFamily="@font/lato_bold" />
 
         <EditText
             android:id="@+id/goalCategory"
             android:layout_width="match_parent"
             android:layout_height="130dp"
+            android:layout_gravity="top|left"
             android:background="@drawable/border"
             android:ems="10"
+            android:gravity="top|left"
             android:inputType="textPersonName" />
 
         <TextView
@@ -67,7 +71,8 @@
             android:layout_marginTop="20sp"
             android:layout_marginBottom="10sp"
             android:text="Due Date"
-            android:textSize="18sp" />
+            android:textSize="16sp"
+            app:fontFamily="@font/lato_bold" />
 
         <EditText
             android:id="@+id/goalDueDate"

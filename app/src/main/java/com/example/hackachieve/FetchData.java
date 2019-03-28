@@ -24,7 +24,6 @@ public class FetchData extends AsyncTask<Void,Void,Void> {
 
 //    Database Data
 
-
     //Long Term Goals Variables
     private ArrayList<String> CardTitle = new ArrayList<>();
     private ArrayList<String> GoalsCompleted = new ArrayList<>();
@@ -383,6 +382,86 @@ public class FetchData extends AsyncTask<Void,Void,Void> {
         ShortGoalDeadline.add("2019-01-14T16:36:25.019Z");
         ShortGoalstatus.add(1);
 
+    }
+
+//    Short Goals completed Data
+
+    public void initShortGoalsCompletedHealth(){
+
+        ParentGoalID.add(1);
+        ShortGoalTitle.add("Prepare to Marathom");
+        ShortGoalDescription.add("Training 3 times per week and run 10 miles per day, no rest and no eat for one week");
+        ShortGoalDeadline.add("2019-01-14T16:36:25.019Z");
+        ShortGoalstatus.add(0);
+
+        ParentGoalID.add(1);
+        ShortGoalTitle.add("Prepare to Run");
+        ShortGoalDescription.add("Training 3 times per week and run 10 miles per day, no rest and no eat for one week");
+        ShortGoalDeadline.add("2019-01-14T16:36:25.019Z");
+        ShortGoalstatus.add(0);
+    }
+
+    public void initShortGoalsCompletedFinances(){
+
+        ParentGoalID.add(2);
+        ShortGoalTitle.add("Prepare to Contability");
+        ShortGoalDescription.add("Training 3 times per week and run 10 miles per day, no rest and no eat for one week");
+        ShortGoalDeadline.add("2019-01-14T16:36:25.019Z");
+        ShortGoalstatus.add(0);
+    }
+
+    public void initShortGoalsCompletedCareer(){
+
+        ParentGoalID.add(3);
+        ShortGoalTitle.add("Prepare to Ielts");
+        ShortGoalDescription.add("Training 3 times per week and run 10 miles per day, no rest and no eat for one week");
+        ShortGoalDeadline.add("2019-01-14T16:36:25.019Z");
+        ShortGoalstatus.add(0);
+
+        ParentGoalID.add(3);
+        ShortGoalTitle.add("Prepare to Ielts");
+        ShortGoalDescription.add("Training 3 times per week and run 10 miles per day, no rest and no eat for one week");
+        ShortGoalDeadline.add("2019-01-14T16:36:25.019Z");
+        ShortGoalstatus.add(0);
+
+        ParentGoalID.add(3);
+        ShortGoalTitle.add("Prepare to Walk");
+        ShortGoalDescription.add("Training 3 times per week and run 10 miles per day, no rest and no eat for one week");
+        ShortGoalDeadline.add("2019-01-14T16:36:25.019Z");
+        ShortGoalstatus.add(1);
+    }
+
+    public void initShortGoalsCompletedFun(){
+
+        ParentGoalID.add(4);
+        ShortGoalTitle.add("Prepare to Kart");
+        ShortGoalDescription.add("Training 3 times per week and run 10 miles per day, no rest and no eat for one week");
+        ShortGoalDeadline.add("2019-01-14T16:36:25.019Z");
+        ShortGoalstatus.add(0);
+    }
+
+    public void initShortGoalsCompletedPersonal(){
+
+        ParentGoalID.add(5);
+        ShortGoalTitle.add("Prepare to Party");
+        ShortGoalDescription.add("Training 3 times per week and run 10 miles per day, no rest and no eat for one week");
+        ShortGoalDeadline.add("2019-01-14T16:36:25.019Z");
+        ShortGoalstatus.add(0);
+
+        ParentGoalID.add(5);
+        ShortGoalTitle.add("Prepare to Party");
+        ShortGoalDescription.add("Training 3 times per week and run 10 miles per day, no rest and no eat for one week");
+        ShortGoalDeadline.add("2019-01-14T16:36:25.019Z");
+        ShortGoalstatus.add(1);
+    }
+
+    public void initShortGoalsCompletedSpiritual(){
+
+        ParentGoalID.add(6);
+        ShortGoalTitle.add("Prepare to Meditation");
+        ShortGoalDescription.add("Training 3 times per week and run 10 miles per day, no rest and no eat for one week");
+        ShortGoalDeadline.add("2019-01-14T16:36:25.019Z");
+        ShortGoalstatus.add(0);
     }
 
 

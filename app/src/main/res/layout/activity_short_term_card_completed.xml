@@ -27,7 +27,8 @@
             android:paddingBottom="15dp"
             android:text="Eat more vegetables"
             android:textColor="@color/buttonBoxColor"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:fontFamily="@font/lato_bold" />
 
         <TextView
             android:id="@+id/shortTermDescriptionCard"
@@ -36,7 +37,8 @@
             android:layout_weight="1"
             android:paddingBottom="15dp"
             android:text="JSHdjhs sjdhj sjdhj hsd hjsd hjshdj hjsdhjshd jhsjdh jshd jhsjdh jshdjh jshdjhsjdhjshfhsjf hjhsfj jsh jsj hfjsh jfhsjfhjsh j"
-            android:textColor="@color/buttonBoxColor" />
+            android:textColor="@color/buttonBoxColor"
+            app:fontFamily="@font/lato" />
 
         <GridLayout
             android:layout_width="match_parent"
@@ -55,7 +57,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="February 11"
-                android:textColor="@color/buttonBoxColor" />
+                android:textColor="@color/buttonBoxColor"
+                app:fontFamily="@font/lato" />
         </GridLayout>
 
     </LinearLayout>
@@ -84,7 +87,8 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:text="COMPLETED"
-            android:textColor="@color/buttonBoxColor" />
+            android:textColor="@color/buttonBoxColor"
+            app:fontFamily="@font/lato_bold" />
     </LinearLayout>
 
 </LinearLayout>

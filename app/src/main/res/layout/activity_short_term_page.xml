@@ -12,7 +12,7 @@
         android:id="@+id/headerBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="2dp"
         android:background="@color/mainPallete02"
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
@@ -59,7 +59,7 @@
                         android:text="HEALTH"
                         android:textColor="@color/monocolorPallete04"
                         android:textSize="12sp"
-                        app:fontFamily="@font/amaranth_bold" />
+                        app:fontFamily="@font/lato_bold" />
 
                 </GridLayout>
 
@@ -70,8 +70,8 @@
                     android:layout_marginLeft="5dp"
                     android:text="Get in shape for skiing"
                     android:textColor="@color/monocolorPallete04"
-                    android:textSize="22sp"
-                    app:fontFamily="@font/alegreya_sans_medium_italic" />
+                    android:textSize="18sp"
+                    app:fontFamily="@font/lato_bold" />
 
 
             </LinearLayout>
@@ -81,7 +81,7 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="497dp"
+        android:layout_height="523dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
 
@@ -119,8 +119,8 @@
                 android:gravity="center"
                 android:text="CURRENT GOALS"
                 android:textColor="@color/mainPallete01"
-                android:textSize="10sp"
-                app:fontFamily="@font/amaranth_bold" />
+                android:textSize="9sp"
+                app:fontFamily="@font/lato_bold" />
 
         </LinearLayout>
 
@@ -159,8 +159,8 @@
                 android:gravity="center"
                 android:text="COMPLETED GOALS"
                 android:textColor="#999999"
-                android:textSize="10sp"
-                app:fontFamily="@font/amaranth_bold" />
+                android:textSize="9sp"
+                app:fontFamily="@font/lato_bold" />
 
         </LinearLayout>
     </LinearLayout>

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.GridLayout;
@@ -53,7 +55,7 @@ public class ShortTermPageCompleted extends AppCompatActivity {
             headerIcon.setImageResource(R.drawable.health_icon);
             headerBackground.setBackgroundColor(Color.parseColor("#5DC8E2"));
 
-            data.initShortGoalsHealth();
+            data.initShortGoalsCompletedHealth();
         }
         if (Category == 2){
             Log.d("ENTER", "02" );
@@ -62,7 +64,7 @@ public class ShortTermPageCompleted extends AppCompatActivity {
             headerIcon.setImageResource(R.drawable.finances_icon);
             headerBackground.setBackgroundColor(Color.parseColor("#F89767"));
 
-            data.initShortGoalsFinances();
+            data.initShortGoalsCompletedFinances();
         }
         if (Category == 3){
             Log.d("ENTER", "03" );
@@ -71,7 +73,7 @@ public class ShortTermPageCompleted extends AppCompatActivity {
             headerIcon.setImageResource(R.drawable.career_icon);
             headerBackground.setBackgroundColor(Color.parseColor("#354AA4"));
 
-            data.initShortGoalsCareer();
+            data.initShortGoalsCompletedCareer();
         }
         if (Category == 4){
             categoryLabel.setText("FUN AND RECREATION");
@@ -79,7 +81,7 @@ public class ShortTermPageCompleted extends AppCompatActivity {
             headerIcon.setImageResource(R.drawable.fun_icon);
             headerBackground.setBackgroundColor(Color.parseColor("#17E09D"));
 
-            data.initShortGoalsFun();
+            data.initShortGoalsCompletedFun();
         }
         if (Category == 5){
             categoryLabel.setText("PERSONAL DEVELOPMENT");
@@ -87,7 +89,7 @@ public class ShortTermPageCompleted extends AppCompatActivity {
             headerIcon.setImageResource(R.drawable.personal_dev_icon);
             headerBackground.setBackgroundColor(Color.parseColor("#F15864"));
 
-            data.initShortGoalsPersonal();
+            data.initShortGoalsCompletedPersonal();
         }
         if (Category == 6){
             categoryLabel.setText("SPIRITUAL");
@@ -95,8 +97,10 @@ public class ShortTermPageCompleted extends AppCompatActivity {
             headerIcon.setImageResource(R.drawable.spiritual_icon);
             headerBackground.setBackgroundColor(Color.parseColor("#796DB6"));
 
-            data.initShortGoalsSpiritual();
+            data.initShortGoalsCompletedSpiritual();
         }
+
+        initRecyclerView();
 
         ongoingButton = (ImageView) findViewById(R.id.ongoingIcon);
         ongoingButton.setOnClickListener(new View.OnClickListener() {
@@ -112,5 +116,12 @@ public class ShortTermPageCompleted extends AppCompatActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    private void initRecyclerView(){
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        RecyclerViewShortTermGoalsCompleted adapter = new RecyclerViewShortTermGoalsCompleted(this, Category, data.getParentGoalID(), data.getShortGoalTitle(),data.getShortGoalDescription(),data.getShortGoalDeadline(), data.getShortGoalstatus());
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

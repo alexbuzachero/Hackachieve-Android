@@ -26,6 +26,7 @@
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="60dp"
             android:paddingTop="5dp">
@@ -44,7 +45,7 @@
                 android:text="HEALTH"
                 android:textColor="@color/mainPallete02"
                 android:textSize="14sp"
-                app:fontFamily="@font/amaranth_bold" />
+                app:fontFamily="@font/lato_black" />
 
         </GridLayout>
 
@@ -53,10 +54,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
             android:text="Get in shape for skiing"
             android:textColor="@color/monocolorPallete01"
-            android:textSize="20sp"
-            app:fontFamily="@font/alegreya_sans_medium_italic" />
+            android:textSize="18sp"
+            app:fontFamily="@font/lato_bold" />
 
 
     </LinearLayout>
@@ -114,7 +116,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:width="250dp"
-            android:text="COMPLETED" />
+            android:text="COMPLETED"
+            app:fontFamily="@font/lato" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -130,7 +133,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="FEBRUARY 28" />
+            android:text="FEBRUARY 28"
+            app:fontFamily="@font/lato" />
 
 
     </GridLayout>
@@ -146,6 +150,8 @@
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
+            android:indeterminateTint="@color/secondaryPallete02"
+            android:progressTint="@color/secondaryPallete02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -18,7 +18,7 @@
         android:text="Great! Now to get started, let`s choose your first main goal!"
         android:textColor="@color/monocolorPallete04"
         android:textSize="21dp"
-        app:fontFamily="@font/amaranth_bold" />
+        app:fontFamily="@font/lato_black" />
 
     <LinearLayout
         android:id="@+id/categoryContainer"
@@ -57,7 +57,7 @@
                     android:text="Health"
                     android:textColor="@color/monocolorPallete04"
                     android:textSize="16sp"
-                    app:fontFamily="@font/amaranth_bold" />
+                    app:fontFamily="@font/lato_black" />
 
                 <TextView
                     android:id="@+id/cardDesc01"
@@ -65,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:text='"Goals to get in shape until the summer..."'
                     android:textColor="@color/monocolorPallete04"
-                    app:fontFamily="@font/alegreya_sans_medium_italic" />
+                    app:fontFamily="@font/lato_italic" />
             </LinearLayout>
         </LinearLayout>
 
@@ -101,7 +101,7 @@
                     android:text="Finances"
                     android:textColor="@color/monocolorPallete04"
                     android:textSize="16sp"
-                    app:fontFamily="@font/amaranth_bold" />
+                    app:fontFamily="@font/lato_black" />
 
                 <TextView
                     android:id="@+id/cardDesc02"
@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:text='"Buying a new car..."'
                     android:textColor="@color/monocolorPallete04"
-                    app:fontFamily="@font/alegreya_sans_medium_italic" />
+                    app:fontFamily="@font/lato_italic" />
             </LinearLayout>
         </LinearLayout>
 
@@ -144,7 +144,7 @@
                     android:text="Spiritual"
                     android:textColor="@color/monocolorPallete04"
                     android:textSize="16sp"
-                    app:fontFamily="@font/amaranth_bold" />
+                    app:fontFamily="@font/lato_black" />
 
                 <TextView
                     android:id="@+id/cardDesc03"
@@ -152,7 +152,7 @@
                     android:layout_height="wrap_content"
                     android:text='"Become a meditation master..."'
                     android:textColor="@color/monocolorPallete04"
-                    app:fontFamily="@font/alegreya_sans_medium_italic" />
+                    app:fontFamily="@font/lato_italic" />
             </LinearLayout>
         </LinearLayout>
 
@@ -187,7 +187,7 @@
                     android:text="Career"
                     android:textColor="@color/monocolorPallete04"
                     android:textSize="16sp"
-                    app:fontFamily="@font/amaranth_bold" />
+                    app:fontFamily="@font/lato_black" />
 
                 <TextView
                     android:id="@+id/cardDesc04"
@@ -195,7 +195,7 @@
                     android:layout_height="wrap_content"
                     android:text='"Things to learn to achieve a this job..."'
                     android:textColor="@color/monocolorPallete04"
-                    app:fontFamily="@font/alegreya_sans_medium_italic" />
+                    app:fontFamily="@font/lato_italic" />
             </LinearLayout>
         </LinearLayout>
 
@@ -230,7 +230,7 @@
                     android:text="Personal Development"
                     android:textColor="@color/monocolorPallete04"
                     android:textSize="16sp"
-                    app:fontFamily="@font/amaranth_bold" />
+                    app:fontFamily="@font/lato_black" />
 
                 <TextView
                     android:id="@+id/cardDesc05"
@@ -238,7 +238,7 @@
                     android:layout_height="wrap_content"
                     android:text='"Improve myself in a specific knowledge..."'
                     android:textColor="@color/monocolorPallete04"
-                    app:fontFamily="@font/alegreya_sans_medium_italic" />
+                    app:fontFamily="@font/lato_italic" />
             </LinearLayout>
         </LinearLayout>
 
@@ -272,7 +272,7 @@
                     android:text="Fun and Recreation"
                     android:textColor="@color/monocolorPallete04"
                     android:textSize="16sp"
-                    app:fontFamily="@font/amaranth_bold" />
+                    app:fontFamily="@font/lato_black" />
 
                 <TextView
                     android:id="@+id/cardDesc06"
@@ -280,7 +280,7 @@
                     android:layout_height="wrap_content"
                     android:text='"Steps to learn snowboard..."'
                     android:textColor="@color/monocolorPallete04"
-                    app:fontFamily="@font/alegreya_sans_medium_italic" />
+                    app:fontFamily="@font/lato_italic" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
