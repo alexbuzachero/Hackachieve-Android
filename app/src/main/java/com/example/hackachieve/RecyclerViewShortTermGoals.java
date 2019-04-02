@@ -52,6 +52,7 @@ public class RecyclerViewShortTermGoals extends RecyclerView.Adapter<RecyclerVie
         viewHolder.ShortGoalDescription.setText(ShortGoalDescription.get(position));
         viewHolder.ShortGoalDeadline.setText(ShortGoalDeadline.get(position));
 
+//            Changing background color, StarIcon Image, and calendar Icon in case the card is Active and Health Category
         if(Category == 1 && ShortGoalstatus.get(position) == 0) {
 
             data.initShortGoalsHealth();
@@ -59,39 +60,50 @@ public class RecyclerViewShortTermGoals extends RecyclerView.Adapter<RecyclerVie
             viewHolder.ShortGoalstatus.setText("ON GOING");
             viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#5DC8E2"));
             viewHolder.starIcon.setImageResource(R.drawable.star_active);
+            viewHolder.calendarIcon.setImageResource(R.drawable.calelndar_icon_light);
         }
+        //            Changing background color, StarIcon Image, and calendar Icon in case the card is Active and Finances Category
         if(Category == 2 && ShortGoalstatus.get(position) == 0) {
 //            data.initShortGoalsFinances();
 
             viewHolder.ShortGoalstatus.setText("ON GOING");
             viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#F89767"));
             viewHolder.starIcon.setImageResource(R.drawable.star_active);
+            viewHolder.calendarIcon.setImageResource(R.drawable.calelndar_icon_light);
         }
+        //            Changing background color, StarIcon Image, and calendar Icon in case the card is Active and Career Category
         if(Category == 3 && ShortGoalstatus.get(position) == 0) {
 
             viewHolder.ShortGoalstatus.setText("ON GOING");
             viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#354AA4"));
             viewHolder.starIcon.setImageResource(R.drawable.star_active);
+            viewHolder.calendarIcon.setImageResource(R.drawable.calelndar_icon_light);
         }
+        //            Changing background color, StarIcon Image, and calendar Icon in case the card is Active and Fun and Recreaton Category
         if(Category == 4 && ShortGoalstatus.get(position) == 0) {
 
             viewHolder.ShortGoalstatus.setText("ON GOING");
             viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#17E09D"));
             viewHolder.starIcon.setImageResource(R.drawable.star_active);
+            viewHolder.calendarIcon.setImageResource(R.drawable.calelndar_icon_light);
         }
+        //            Changing background color, StarIcon Image, and calendar Icon in case the card is Active and Personal Category
         if(Category == 5 && ShortGoalstatus.get(position) == 0) {
 
             viewHolder.ShortGoalstatus.setText("ON GOING");
             viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#F15864"));
             viewHolder.starIcon.setImageResource(R.drawable.star_active);
+            viewHolder.calendarIcon.setImageResource(R.drawable.calelndar_icon_light);
         }
+        //            Changing background color, StarIcon Image, and calendar Icon in case the card is Active and Spiritual Category
         if(Category == 6 && ShortGoalstatus.get(position) == 0) {
 
             viewHolder.ShortGoalstatus.setText("ON GOING");
             viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#796DB6"));
             viewHolder.starIcon.setImageResource(R.drawable.star_active);
+            viewHolder.calendarIcon.setImageResource(R.drawable.calelndar_icon_light);
         }
-
+//            Changing background color, StarIcon Image, and calendar Icon in case the card is Not Active
         if(ShortGoalstatus.get(position) == 1) {
 
             viewHolder.ShortGoalTitle.setTextColor(Color.parseColor("#54575D"));
@@ -115,6 +127,7 @@ public class RecyclerViewShortTermGoals extends RecyclerView.Adapter<RecyclerVie
         TextView ShortGoalDeadline;
         TextView ShortGoalstatus;
         ImageView starIcon;
+        ImageView calendarIcon;
         LinearLayout shortTermCardBackground;
 
         public ViewHolder(View itemView) {
@@ -125,6 +138,7 @@ public class RecyclerViewShortTermGoals extends RecyclerView.Adapter<RecyclerVie
             ShortGoalDeadline = itemView.findViewById(R.id.shortTearmDeadlineCard);
             ShortGoalstatus = itemView.findViewById(R.id.statusCard);
             starIcon = itemView.findViewById(R.id.starIcon);
+            calendarIcon = itemView.findViewById(R.id.calendarIcon);
             shortTermCardBackground = itemView.findViewById(R.id.shortTermCardBackground);
         }
     }

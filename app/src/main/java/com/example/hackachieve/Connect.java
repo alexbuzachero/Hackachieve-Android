@@ -6,6 +6,4 @@ public class Connect {
     private String user = "joaopaulofurtado@live.com";
     private String password = "123";
     private String token = "";
-
-
 }

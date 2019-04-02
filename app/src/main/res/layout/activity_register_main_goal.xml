@@ -55,13 +55,6 @@
             android:textSize="16sp"
             app:fontFamily="@font/lato_bold" />
 
-        <!--<EditText-->
-            <!--android:id="@+id/goalCategory"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:background="@drawable/border"-->
-            <!--android:ems="10"-->
-            <!--android:inputType="textPersonName" />-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

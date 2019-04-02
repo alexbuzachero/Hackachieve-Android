@@ -59,6 +59,7 @@ public class RecyclerViewGoalsCompleted extends RecyclerView.Adapter<RecyclerVie
         ViewHolder.progressBar.setProgress(progressCard);
         Log.d("ProgressCard", String.valueOf(progressCard));
 
+        //            Changing Title, background color, Category Icon and title color in case to be Health Category
         if(mBoard_id.get(position) == 1) {
 
             viewHolder.categoryLabel.setText("HEALTH");
@@ -66,6 +67,7 @@ public class RecyclerViewGoalsCompleted extends RecyclerView.Adapter<RecyclerVie
             viewHolder.iconCard.setImageResource(R.drawable.health_icon_color);
             viewHolder.categoryLabel.setTextColor(Color.parseColor("#5DC8E2"));
         }
+        //            Changing Title, background color, Category Icon and title color in case to be Finances Category
         if(mBoard_id.get(position) == 2) {
 
             viewHolder.categoryLabel.setText("FINANCES");
@@ -73,6 +75,7 @@ public class RecyclerViewGoalsCompleted extends RecyclerView.Adapter<RecyclerVie
             viewHolder.iconCard.setImageResource(R.drawable.finances_icon_color);
             viewHolder.categoryLabel.setTextColor(Color.parseColor("#F89767"));
         }
+        //            Changing Title, background color, Category Icon and title color in case to be Career Category
         if(mBoard_id.get(position) == 3) {
 
             viewHolder.categoryLabel.setText("CAREER");
@@ -80,6 +83,7 @@ public class RecyclerViewGoalsCompleted extends RecyclerView.Adapter<RecyclerVie
             viewHolder.iconCard.setImageResource(R.drawable.career_icon_color);
             viewHolder.categoryLabel.setTextColor(Color.parseColor("#354AA4"));
         }
+        //            Changing Title, background color, Category Icon and title color in case to be Fun and Recreation Category
         if(mBoard_id.get(position) == 4) {
 
             viewHolder.categoryLabel.setText("FUN AND RECREATION");
@@ -87,6 +91,7 @@ public class RecyclerViewGoalsCompleted extends RecyclerView.Adapter<RecyclerVie
             viewHolder.iconCard.setImageResource(R.drawable.fun_icon_color);
             viewHolder.categoryLabel.setTextColor(Color.parseColor("#17E09D"));
         }
+        //            Changing Title, background color, Category Icon and title color in case to be Personal Category
         if(mBoard_id.get(position) == 5) {
 
             viewHolder.categoryLabel.setText("PERSONAL DEVELOPMENT");
@@ -94,6 +99,7 @@ public class RecyclerViewGoalsCompleted extends RecyclerView.Adapter<RecyclerVie
             viewHolder.iconCard.setImageResource(R.drawable.personal_dev_icon_color);
             viewHolder.categoryLabel.setTextColor(Color.parseColor("#F15864"));
         }
+        //            Changing Title, background color, Category Icon and title color in case to be Spiritual Category
         if(mBoard_id.get(position) == 6) {
 
             viewHolder.categoryLabel.setText("SPIRITUAL");

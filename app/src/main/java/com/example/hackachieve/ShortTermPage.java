@@ -50,15 +50,14 @@ public class ShortTermPage extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
+        //        Getting the Category and Pagetitle information to passed my previous activity
+
         Category = extras.getInt("CATEGORY");
         Title = extras.getString("PAGETITLE");
 
-        Log.d("CategoryPage", String.valueOf(Category));
-        Log.d("CategoryPage", Title );
-
+//            Changing Title, Subtitle, background color, Category Icon and loading the correspodent short term goals in case to be Health Category
 
         if (Category == 1){
-            Log.d("ENTER", "01" );
             categoryLabel.setText("HEALTH");
             pageTitle.setText(Title);
             headerIcon.setImageResource(R.drawable.health_icon);
@@ -66,8 +65,9 @@ public class ShortTermPage extends AppCompatActivity {
 
             data.initShortGoalsHealth();
         }
+//            Changing Title, Subtitle, background color, Category Icon and loading the correspodent short term goals in case to be Finances Category
+
         if (Category == 2){
-            Log.d("ENTER", "02" );
             categoryLabel.setText("FINANCES");
             pageTitle.setText(Title);
             headerIcon.setImageResource(R.drawable.finances_icon);
@@ -75,8 +75,9 @@ public class ShortTermPage extends AppCompatActivity {
 
             data.initShortGoalsFinances();
         }
+//            Changing Title, Subtitle, background color, Category Icon and loading the correspodent short term goals in case to be Career Category
+
         if (Category == 3){
-            Log.d("ENTER", "03" );
             categoryLabel.setText("CAREER");
             pageTitle.setText(Title);
             headerIcon.setImageResource(R.drawable.career_icon);
@@ -84,6 +85,8 @@ public class ShortTermPage extends AppCompatActivity {
 
             data.initShortGoalsCareer();
         }
+//            Changing Title, Subtitle, background color, Category Icon and loading the correspodent short term goals in case to be Fun and Recreation Category
+
         if (Category == 4){
             categoryLabel.setText("FUN AND RECREATION");
             pageTitle.setText(Title);
@@ -92,6 +95,8 @@ public class ShortTermPage extends AppCompatActivity {
 
             data.initShortGoalsFun();
         }
+//            Changing Title, Subtitle, background color, Category Icon and loading the correspodent short term goals in case to be Personal Category
+
         if (Category == 5){
             categoryLabel.setText("PERSONAL DEVELOPMENT");
             pageTitle.setText(Title);
@@ -100,6 +105,8 @@ public class ShortTermPage extends AppCompatActivity {
 
             data.initShortGoalsPersonal();
         }
+//            Changing Title, Subtitle, background color, Category Icon and loading the correspodent short term goals in case to be Spiritual Category
+
         if (Category == 6){
             categoryLabel.setText("SPIRITUAL");
             pageTitle.setText(Title);
@@ -110,6 +117,8 @@ public class ShortTermPage extends AppCompatActivity {
         }
 
         initRecyclerView();
+
+//       Adding the button listener
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,6 +163,7 @@ public class ShortTermPage extends AppCompatActivity {
     }
 
     public void openShortTermGoalsCompleted(){
+//        Passing Caregory and Pagetitle data informatio  to Short Term Completed page
         extras.putInt("CATEGORY", Category);
         extras.putString("PAGETITLE", Title);
 

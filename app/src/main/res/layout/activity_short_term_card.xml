@@ -9,15 +9,15 @@
     android:layout_marginBottom="10dp"
     android:background="@color/mainPallete02"
     android:orientation="vertical"
-    android:paddingLeft="10dp"
     android:paddingTop="10dp"
-    android:paddingRight="10dp"
     android:paddingBottom="10dp"
     tools:context=".ShortTermCard">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="vertical">
 
         <TextView
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingBottom="15dp"
-            android:text="JSHdjhs sjdhj sjdhj hsd hjsd hjshdj hjsdhjshd jhsjdh jshd jhsjdh jshdjh jshdjhsjdhjshfhsjf hjhsfj jsh jsj hfjsh jfhsjfhjsh j"
+            android:text="Card Description"
             android:textColor="@color/monocolorPallete04"
             app:fontFamily="@font/lato" />
 
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/calendarIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="15dp"
                 android:layout_marginTop="2dp"
@@ -57,6 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:paddingTop="3dp"
                 android:text="February 11"
                 android:textColor="@color/monocolorPallete04"
                 app:fontFamily="@font/lato" />
@@ -73,7 +74,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -86,6 +89,7 @@
             android:id="@+id/statusCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:gravity="right"
             android:text="ON GOING"
             android:textColor="@color/monocolorPallete04"

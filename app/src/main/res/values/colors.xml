@@ -32,5 +32,6 @@
     <color name="GrayTExt">#999999</color>
     <color name="HeaderBackground">#1F2350</color>
     <color name="CompletedBackground">#F4F4FC</color>
+    <color name="GradienteGray">#E9E9F7</color>
 
 </resources>

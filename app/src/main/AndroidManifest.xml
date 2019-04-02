@@ -11,10 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InitialCategoryScreen"></activity>
-        <activity android:name=".RegisterShortGoal" />
-        <activity android:name=".RegisterMainGoal" />
-        <activity android:name=".MenuPage" />
+        <activity android:name=".InitialCategoryScreen" android:screenOrientation="portrait"></activity>
+        <activity android:name=".RegisterShortGoal" android:screenOrientation="portrait"/>
+        <activity android:name=".RegisterMainGoal" android:screenOrientation="portrait"/>
+        <activity android:name=".MenuPage" android:screenOrientation="portrait"/>
         <activity android:name=".ShortTermCardCompleted" />
 
         <meta-data
@@ -24,14 +24,14 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".ShortTermPageCompleted" />
-        <activity android:name=".LongTermPageCompleted" />
-        <activity android:name=".ShortTermCard" />
-        <activity android:name=".ShortTermPage" />
-        <activity android:name=".LongTermCard" />
-        <activity android:name=".LongTermPage" />
-        <activity android:name=".RegisterPage" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ShortTermPageCompleted" android:screenOrientation="portrait" />
+        <activity android:name=".LongTermPageCompleted" android:screenOrientation="portrait"/>
+        <activity android:name=".ShortTermCard"/>
+        <activity android:name=".ShortTermPage" android:screenOrientation="portrait"/>
+        <activity android:name=".LongTermCard"/>
+        <activity android:name=".LongTermPage" android:screenOrientation="portrait"/>
+        <activity android:name=".RegisterPage" android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

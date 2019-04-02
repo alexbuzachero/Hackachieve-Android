@@ -72,6 +72,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             ViewHolder.progressBar.setProgress(progressCard);
             Log.d("ProgressCard", String.valueOf(progressCard));
 
+//            Changing Title, background color, Category Icon and title color in case to be Health Category
         if(mBoard_id.get(position) == 1) {
 
             viewHolder.categoryLabel.setText("HEALTH");
@@ -101,6 +102,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 }
             });
         }
+        //            Changing Title, background color, Category Icon and title color in case to be Finances Category
         if(mBoard_id.get(position) == 2) {
 
             viewHolder.categoryLabel.setText("FINANCES");
@@ -128,6 +130,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             });
 
         }
+        //            Changing Title, background color, Category Icon and title color in case to be Career Category
         if(mBoard_id.get(position) == 3) {
 
             viewHolder.categoryLabel.setText("CAREER");
@@ -154,6 +157,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 }
             });
         }
+        //            Changing Title, background color, Category Icon and title color in case to be Fun and Recreation Category
         if(mBoard_id.get(position) == 4) {
 
             viewHolder.categoryLabel.setText("FUN AND RECREATION");
@@ -180,6 +184,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 }
             });
         }
+        //            Changing Title, background color, Category Icon and title color in case to be Personal Category
         if(mBoard_id.get(position) == 5) {
 
             viewHolder.categoryLabel.setText("PERSONAL DEVELOPMENT");
@@ -207,6 +212,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 }
             });
         }
+        //            Changing Title, background color, Category Icon and title color in case to be Spiritual Category
         if(mBoard_id.get(position) == 6) {
 
             viewHolder.categoryLabel.setText("SPIRITUAL");

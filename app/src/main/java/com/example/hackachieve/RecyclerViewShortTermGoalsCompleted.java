@@ -46,62 +46,9 @@ public class RecyclerViewShortTermGoalsCompleted extends RecyclerView.Adapter<Re
     @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
-
-//        data.initShortGoalsFinances();
-
         viewHolder.ShortGoalTitle.setText(ShortGoalTitle.get(position));
         viewHolder.ShortGoalDescription.setText(ShortGoalDescription.get(position));
         viewHolder.ShortGoalDeadline.setText(ShortGoalDeadline.get(position));
-
-//        if(Category == 1 && ShortGoalstatus.get(position) == 0) {
-//
-//            data.initShortGoalsHealth();
-//
-//            viewHolder.ShortGoalstatus.setText("ON GOING");
-//            viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#5DC8E2"));
-//            viewHolder.starIcon.setImageResource(R.drawable.star_active);
-//        }
-//        if(Category == 2 && ShortGoalstatus.get(position) == 0) {
-////            data.initShortGoalsFinances();
-//
-//            viewHolder.ShortGoalstatus.setText("ON GOING");
-//            viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#F89767"));
-//            viewHolder.starIcon.setImageResource(R.drawable.star_active);
-//        }
-//        if(Category == 3 && ShortGoalstatus.get(position) == 0) {
-//
-//            viewHolder.ShortGoalstatus.setText("ON GOING");
-//            viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#354AA4"));
-//            viewHolder.starIcon.setImageResource(R.drawable.star_active);
-//        }
-//        if(Category == 4 && ShortGoalstatus.get(position) == 0) {
-//
-//            viewHolder.ShortGoalstatus.setText("ON GOING");
-//            viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#17E09D"));
-//            viewHolder.starIcon.setImageResource(R.drawable.star_active);
-//        }
-//        if(Category == 5 && ShortGoalstatus.get(position) == 0) {
-//
-//            viewHolder.ShortGoalstatus.setText("ON GOING");
-//            viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#F15864"));
-//            viewHolder.starIcon.setImageResource(R.drawable.star_active);
-//        }
-//        if(Category == 6 && ShortGoalstatus.get(position) == 0) {
-//
-//            viewHolder.ShortGoalstatus.setText("ON GOING");
-//            viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#796DB6"));
-//            viewHolder.starIcon.setImageResource(R.drawable.star_active);
-//        }
-//
-//        if(ShortGoalstatus.get(position) == 1) {
-//
-//            viewHolder.ShortGoalTitle.setTextColor(Color.parseColor("#54575D"));
-//            viewHolder.ShortGoalDescription.setTextColor(Color.parseColor("#54575D"));
-//            viewHolder.ShortGoalDeadline.setTextColor(Color.parseColor("#54575D"));
-////            viewHolder.ShortGoalstatus.setTextColor(Color.parseColor("#F4F4FC"));
-////            viewHolder.shortTermCardBackground.setBackgroundColor(Color.parseColor("#F4F4FC"));
-////            viewHolder.starIcon.setImageResource(R.drawable.star_icon);
-//        }
     }
 
     @Override
@@ -114,9 +61,6 @@ public class RecyclerViewShortTermGoalsCompleted extends RecyclerView.Adapter<Re
         TextView ShortGoalTitle;
         TextView ShortGoalDescription;
         TextView ShortGoalDeadline;
-//        TextView ShortGoalstatus;
-//        ImageView starIcon;
-//        LinearLayout shortTermCardBackground;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -124,9 +68,6 @@ public class RecyclerViewShortTermGoalsCompleted extends RecyclerView.Adapter<Re
             ShortGoalTitle = itemView.findViewById(R.id.shortTermTitleCard);
             ShortGoalDescription = itemView.findViewById(R.id.shortTermDescriptionCard);
             ShortGoalDeadline = itemView.findViewById(R.id.shortTearmDeadlineCard);
-//            ShortGoalstatus = itemView.findViewById(R.id.statusCard);
-//            starIcon = itemView.findViewById(R.id.starIcon);
-//            shortTermCardBackground = itemView.findViewById(R.id.shortTermCardBackground);
         }
     }
 }
